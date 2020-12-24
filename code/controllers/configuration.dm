@@ -190,7 +190,10 @@ var/list/gamemode_cache = list()
 	var/radiation_resistance_multiplier = 1.25
 	var/radiation_material_resistance_divisor = 2 //A turf's possible radiation resistance is divided by this number, to get the real value.
 	var/radiation_lower_limit = 0.15 //If the radiation level for a turf would be below this, ignore it.
-
+	var/panic_bunker = TRUE //is the panic bunker enabled?
+	var/panic_bunker_message = "Lo siento! El bunker de panico está activo. Unete al Discord para solicitar el acceso."
+	var/delist_population = 60 //What population do we automatically take ourselves off to hub at?
+	var/pb_population = 80 //What population do we automatically engage the panic bunker at?
 	var/autostealth = 0 // Staff get automatic stealth after this many minutes
 
 	var/error_cooldown = 600 // The "cooldown" time for each occurrence of a unique error
@@ -604,6 +607,9 @@ var/list/gamemode_cache = list()
 
 				if("disable_welder_vision")
 					config.welder_vision = 0
+
+				if ("panic_bunker")
+					config.panic_bunker = TRUE
 
 				if("disable_circuit_printing")
 					config.allow_ic_printing = FALSE
