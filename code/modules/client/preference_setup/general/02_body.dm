@@ -38,7 +38,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 //################################################################################## VESTA.BAY ##########################
 
 	var/has_cortical_stack = FALSE
+
+//////MANAOS CODE//////////
+
 	var/sprite_resize = FALSE
+
 //#######################################################################################################################
 //# VESTA.BAY # PORT NEURAL LACES #######################################################################################
 //################################################################################## VESTA.BAY ##########################
@@ -109,9 +113,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	W.write("organ_data", pref.organ_data)
 	W.write("rlimb_data", pref.rlimb_data)
 	W.write("body_markings", pref.body_markings)
-	W.write("sprite_resize", pref.sprite_resize)
 	W.write("body_descriptors", pref.body_descriptors)
 	W.write("bgstate", pref.bgstate)
+//////MANAOS CODE//////////
+	W.write("sprite_resize", pref.sprite_resize)
+
 
 //#######################################################################################################################
 //# VESTA.BAY # PORT NEURAL LACES #######################################################################################
@@ -139,7 +145,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.g_eyes			= sanitize_integer(pref.g_eyes, 0, 255, initial(pref.g_eyes))
 	pref.b_eyes			= sanitize_integer(pref.b_eyes, 0, 255, initial(pref.b_eyes))
 	pref.b_type			= sanitize_text(pref.b_type, initial(pref.b_type))
+
+//Manaos code//
 	pref.sprite_resize = sanitize_bool(pref.sprite_resize, initial(pref.sprite_resize))
+
 //#######################################################################################################################
 //# VESTA.BAY # PORT NEURAL LACES #######################################################################################
 //################################################################################## VESTA.BAY ##########################
@@ -230,9 +239,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 //#######################################################################################################################
 //# VESTA.BAY # PORT NEURAL LACES #######################################################################################
 //################################################################################## VESTA.BAY ##########################
+
+///Manaos code//
 	. += "Sprite Resize: "
 	. += pref.sprite_resize ? "<b>Yes.</b>" : "No."
 	. += " \[<a href='byond://?src=\ref[src];toggle_resize=1'>toggle</a>\]<br>"
+/////
 
 	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 
@@ -408,9 +420,11 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 //# VESTA.BAY # PORT NEURAL LACES #######################################################################################
 //################################################################################## VESTA.BAY ##########################
 
+///Manaos code///
 	else if(href_list["toggle_resize"])
 		pref.sprite_resize = !pref.sprite_resize
 		return TOPIC_REFRESH
+///
 
 	else if(href_list["blood_type"])
 		var/new_b_type = input(user, "Choose your character's blood-type:", CHARACTER_PREFERENCE_INPUT_TITLE) as null|anything in valid_bloodtypes
@@ -797,6 +811,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			if(status in list("assisted","mechanical"))
 				pref.organ_data[name] = null
 
+//////MANAOS CODE//////////
 /datum/preferences/copy_to(mob/living/carbon/human/character, is_preview_copy = FALSE)
 	..()
 	if(sprite_resize)
