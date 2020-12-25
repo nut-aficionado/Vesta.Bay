@@ -657,12 +657,12 @@
 	var/cooldown = 0
 /obj/item/toy/figure/ana/attack_self(mob/user as mob)
 	if(cooldown < world.time - 8)
-		playsound(user, 'sound/interactions/slime_squish.ogg', 20, 1)
+		playsound(user, 'sound/misc/slime_squish.ogg', 20, 1)
 		cooldown = world.time
 /obj/item/toy/figure/ana/attack_hand(mob/user as mob)
 	if(loc == user)
 		if(cooldown < world.time - 8)
-			playsound(user, 'sound/interactions/slime_squish.ogg', 20, 1)
+			playsound(user, 'sound/misc/slime_squish.ogg', 20, 1)
 			cooldown = world.time
 			return
 	..()
@@ -719,12 +719,12 @@
 	var/cooldown = 0
 /obj/item/toy/figure/slimy/attack_self(mob/user as mob)
 	if(cooldown < world.time - 8)
-		playsound(user, 'sound/interactions/slime_squish.ogg', 20, 1)
+		playsound(user, 'sound/misc/slime_squish.ogg', 20, 1)
 		cooldown = world.time
 /obj/item/toy/figure/slimy/attack_hand(mob/user as mob)
 	if(loc == user)
 		if(cooldown < world.time - 8)
-			playsound(user, 'sound/interactions/slime_squish.ogg', 20, 1)
+			playsound(user, 'sound/misc/slime_squish.ogg', 20, 1)
 			cooldown = world.time
 			return
 	..()
@@ -741,12 +741,12 @@
 	var/cooldown = 0
 /obj/item/toy/figure/uzume/attack_self(mob/user as mob)
 	if(cooldown < world.time - 8)
-		playsound(user, 'sound/interactions/slime_squish.ogg', 20, 1)
+		playsound(user, 'sound/misc/slime_squish.ogg', 20, 1)
 		cooldown = world.time
 /obj/item/toy/figure/uzume/attack_hand(mob/user as mob)
 	if(loc == user)
 		if(cooldown < world.time - 8)
-			playsound(user, 'sound/interactions/slime_squish.ogg', 20, 1)
+			playsound(user, 'sound/misc/slime_squish.ogg', 20, 1)
 			cooldown = world.time
 			return
 	..()
@@ -758,12 +758,12 @@
 	var/cooldown = 0
 /obj/item/toy/figure/suki/attack_self(mob/user as mob)
 	if(cooldown < world.time - 8)
-		playsound(user, 'sound/interactions/slime_squish.ogg', 20, 1)
+		playsound(user, 'sound/misc/slime_squish.ogg', 20, 1)
 		cooldown = world.time
 /obj/item/toy/figure/suki/attack_hand(mob/user as mob)
 	if(loc == user)
 		if(cooldown < world.time - 8)
-			playsound(user, 'sound/interactions/slime_squish.ogg', 20, 1)
+			playsound(user, 'sound/misc/slime_squish.ogg', 20, 1)
 			cooldown = world.time
 			return
 	..()
