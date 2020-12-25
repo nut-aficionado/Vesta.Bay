@@ -2,7 +2,7 @@
 	name = CULTURE_UNATHI_DIAMOND_PEAKS
 	description = "Famosamente brutos y aislacionistas, a los Unathi de los Montes Diamante no les agradan los forasteros de ninguna forma, sean otras especies o extranjeros Unathi. Solo \
 	les importa su clan. El conflicto y la victoria son sus valores vitales, y suelen ser encontrados en la fortaleza de su clan, peleando duelos de gladiadores para \
-	avanzar su creencia y valor en la Gran Estratagema, y ejerciendo poder sobre sus vasallos en zonas inferiores. A pesar de esto, las divisiones entre los maestros \
+	avanzar su creencia y valor en la Gran Estratagema, y ejerciendo poder sobre sus vasallos en zonas inferiores, protegiendo tanto a ellos como a Moghes en general. A pesar de esto, las divisiones entre los maestros \
 	feudales y sus clanes avasallados se ha estado gradualmente disolviendo."
 	economic_power = 0.8
 	language = LANGUAGE_UNATHI_SINTA
