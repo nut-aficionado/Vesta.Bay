@@ -1504,3 +1504,26 @@
 					/obj/item/toy/figure/zsle)
 
 	contraband = list(/obj/item/toy/figure/vlad)
+
+	obj/machinery/vending/cola/manaos
+	name = "Manaos"
+	desc = "Una maquina de bebidas unicamente de Manaos, marca \"Manaos\"."
+	icon_state = "Manaos_Machine"
+	icon_vend = "Manaos_Machine-vend"
+	icon_deny = "Manaos_Machine-deny"
+	vend_delay = 11
+	base_type = /obj/machinery/vending/cola
+	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_cola = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_manzana = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limalimon = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_naranja = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_uva = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limon = 5)
+	prices = list(/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_cola = 2,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_manzana = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limalimon = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_naranja = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_uva = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limon = 4)
+
+	idle_power_usage = 211
