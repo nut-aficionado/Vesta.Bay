@@ -3489,7 +3489,7 @@
 	glass_name = "mate"
 	glass_desc = "No lo sueltes o vas a desparramar por todos lados."
 
-	/datum/reagent/drink/manaos_cola
+/datum/reagent/drink/manaos_cola
 	name = "Manaos Cola"
 	description = "Un refrescante bravaje, sabor Cola."
 	taste_description = "cola"
