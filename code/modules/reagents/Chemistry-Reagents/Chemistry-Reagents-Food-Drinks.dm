@@ -3466,7 +3466,7 @@
 	description = "Extrano... no crees que sea buena idea comer esto."
 	taste_description = "algo amargo"
 	reagent_state = SOLID
-	color = "#597A31"
+	color = "#597a31"
 
 /datum/reagent/nutriment/yerba/touch_turf(var/turf/simulated/T)
 	if(!istype(T, /turf/space))
@@ -3481,7 +3481,7 @@
 	description = "Una infusion hecha con hojas de yerba mate, bastante popular en ciertos lugares, por alguna razon."
 	taste_description = "algo amargo"
 	taste_mult = 1.3
-	color = "#789C94"
+	color = "#789c94"
 	adj_dizzy = -5
 	adj_drowsy = -3
 	adj_temp = 25
@@ -3520,7 +3520,7 @@
 	description = "Un refrescante bravaje, con sabor a lima limon."
 	taste_description = "cola y lima limon"
 	reagent_state = LIQUID
-	color = "#5D822E"
+	color = "#5d822e"
 	adj_drowsy = -3
 	adj_temp = -5
 
@@ -3533,7 +3533,7 @@
 	description = "Un refrescante bravaje, con sabor a naranja."
 	taste_description = "cola y naranja"
 	reagent_state = LIQUID
-	color = "#AB7B0C"
+	color = "#ab7b0c"
 	adj_drowsy = -3
 	adj_temp = -5
 
@@ -3546,7 +3546,7 @@
 	description = "Un refrescante bravaje, con sabor a uva."
 	taste_description = "cola"
 	reagent_state = LIQUID
-	color = "#3B0059"
+	color = "#3b0059"
 	adj_drowsy = -3
 	adj_temp = -5
 
@@ -3559,7 +3559,7 @@
 	description = "Un refrescante bravaje, con sabor a limon."
 	taste_description = "cola y limon"
 	reagent_state = LIQUID
-	color = "#BAB741"
+	color = "#bab741"
 	adj_drowsy = -3
 	adj_temp = -5
 
