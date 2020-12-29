@@ -1455,3 +1455,75 @@
 	product_slogans = ";STARFIGHTER TESTED!, STARFIGHTER RECOMMENDED!, STARFIGHTER APPROVED!;YOU ARE NOT ALLOWED A JELLY DOUGHNUT!;YOU DONT WANT TO DIE HUNGRY SOLDIER!"
 	product_ads = "Everything the body needs!;Now transfat free;Vegan options are available.;Rated for all known species!"
 	base_type = /obj/machinery/vending/mredispenser
+
+///MANAOS CODE///
+/obj/machinery/vending/figurevendor
+	name = "Vendedor de figuras de accion \"Manaos\""
+	desc = "Una maquina que vende figuras de accion de edicion limitada."
+	vend_delay = 30
+	base_type = /obj/machinery/vending/figurevendor
+	product_slogans = "Adorable!"
+	icon_state = "MagiVend"
+	icon_deny = "MagiVend-deny"
+	icon_vend = "MagiVend-vend"
+	products = list(/obj/item/toy/figure/aleph,
+					/obj/item/toy/figure/alicia,
+					/obj/item/toy/figure/alysson,
+					/obj/item/toy/figure/ana,
+					/obj/item/toy/figure/angelina,
+					/obj/item/toy/figure/azazel,
+					/obj/item/toy/figure/area,
+					/obj/item/toy/figure/ariel,
+					/obj/item/toy/figure/arkin,
+					/obj/item/toy/figure/bruno,
+					/obj/item/toy/figure/camilo,
+					/obj/item/toy/figure/connor,
+					/obj/item/toy/figure/dana,
+					/obj/item/toy/figure/darkness,
+					/obj/item/toy/figure/duck,
+					/obj/item/toy/figure/franco,
+					/obj/item/toy/figure/gabriel,
+					/obj/item/toy/figure/hal,
+					/obj/item/toy/figure/honkito,
+					/obj/item/toy/figure/iryna,
+					/obj/item/toy/figure/jr,
+					/obj/item/toy/figure/kans,
+					/obj/item/toy/figure/lazy,
+					/obj/item/toy/figure/louie,
+					/obj/item/toy/figure/manuel,
+					/obj/item/toy/figure/priscilla,
+					/obj/item/toy/figure/sam,
+					/obj/item/toy/figure/slimy,
+					/obj/item/toy/figure/smug,
+					/obj/item/toy/figure/suki,
+					/obj/item/toy/figure/sydney1,
+					/obj/item/toy/figure/sydney2,
+					/obj/item/toy/figure/uzume,
+					/obj/item/toy/figure/vaum,
+					/obj/item/toy/figure/wh,
+					/obj/item/toy/figure/zsle)
+
+	contraband = list(/obj/item/toy/figure/vlad)
+
+	obj/machinery/vending/cola/manaos
+	name = "Manaos"
+	desc = "Una maquina de bebidas unicamente de Manaos, marca \"Manaos\"."
+	icon_state = "Manaos_Machine"
+	icon_vend = "Manaos_Machine-vend"
+	icon_deny = "Manaos_Machine-deny"
+	vend_delay = 11
+	base_type = /obj/machinery/vending/cola
+	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_cola = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_manzana = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limalimon = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_naranja = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_uva = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limon = 5)
+	prices = list(/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_cola = 2,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_manzana = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limalimon = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_naranja = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_uva = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limon = 4)
+
+	idle_power_usage = 211
