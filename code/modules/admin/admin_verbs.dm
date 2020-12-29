@@ -152,6 +152,9 @@ var/list/admin_verbs_server = list(
 	/datum/admins/proc/adspawn,
 	/datum/admins/proc/adjump,
 	/client/proc/toggle_random_events,
+	/datum/admins/proc/panicbunker,
+	/datum/admins/proc/addbunkerbypass,
+	/datum/admins/proc/revokebunkerbypass,
 	/client/proc/nanomapgen_DumpImage
 	)
 var/list/admin_verbs_debug = list(
@@ -277,6 +280,9 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/air_report,
 	/client/proc/enable_debug_verbs,
 	/client/proc/roll_dices,
+	/datum/admins/proc/panicbunker,
+	/datum/admins/proc/addbunkerbypass,
+	/datum/admins/proc/revokebunkerbypass,
 	/proc/possess,
 	/proc/release
 	)
