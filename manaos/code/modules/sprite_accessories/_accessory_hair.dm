@@ -1,6 +1,6 @@
 /datum/sprite_accessory/hair
 	icon = 'manaos/icons/mob/human_races/species/human/hair.dmi'
-	var/flags
+	flags
 
 /datum/sprite_accessory/hair/cerberus
 	name = "Cerberus"
