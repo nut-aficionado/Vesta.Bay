@@ -1,4 +1,4 @@
-/datum/sprite_accessory/hair
+/datum/sprite_accessory/hair/manaos
 	icon = 'manaos/icons/mob/human_races/species/human/hair.dmi'
 	flags
 
