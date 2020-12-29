@@ -1,4 +1,5 @@
 /datum/sprite_accessory/hair/manaos
+	name = "Manaos"
 	icon = 'manaos/icons/mob/human_races/species/human/hair.dmi'
 	icon_state = "hair_anomaly"
 
