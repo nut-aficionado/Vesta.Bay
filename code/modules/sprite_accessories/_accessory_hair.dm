@@ -915,7 +915,7 @@
 
 ///**MANAOS CODE**//
 
-/datum/sprite_accessory/hair/cerberus
+/*/datum/sprite_accessory/hair/cerberus
 	name = "Cerberus"
 	icon_state = "hair_cerberus"
 	flags = HAIR_TIEABLE
@@ -939,6 +939,7 @@
 	name = "Himecut Long Ponytail"
 	icon_state = "himecut_long_ponytail"
 	flags = HAIR_TIEABLE
+	*/
 /datum/sprite_accessory/hair/mullethawk
 	name = "Mullet-Hawk"
 	icon_state = "hair_mullethawk"
