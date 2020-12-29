@@ -1323,7 +1323,7 @@
 	pixel_y = -6;
 	req_access = list(list("ACCESS_MEDICAL","ACCESS_ROBOTICS"))
 	},
-/obj/effect/floor_decal/corner/yellow/mono,
+/obj/effect/floor_decal/corner/research/mono,
 /turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/laboratory)
 "acG" = (
@@ -2485,7 +2485,6 @@
 /obj/structure/closet/secure_closet/security_torch,
 /obj/item/stack/medical/advanced/ointment,
 /obj/item/stack/medical/advanced/bruise_pack,
-/obj/item/gunbox,
 /turf/simulated/floor/tiled/monotile,
 /area/security/locker)
 "aey" = (
@@ -6019,7 +6018,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralstarboard)
 "aop" = (
-/obj/effect/floor_decal/corner/yellow,
+/obj/effect/floor_decal/corner/research,
 /obj/effect/floor_decal/techfloor{
 	dir = 1;
 	icon_state = "techfloor_edges"
@@ -6108,8 +6107,9 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/effect/floor_decal/corner/yellow{
-	dir = 6
+/obj/effect/floor_decal/corner/research{
+	dir = 6;
+	icon_state = "corner_white"
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/laboratory)
@@ -6255,8 +6255,9 @@
 /turf/unsimulated/mask,
 /area/hallway/primary/firstdeck/center)
 "aqp" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 4
+/obj/effect/floor_decal/corner/research{
+	dir = 4;
+	icon_state = "corner_white"
 	},
 /obj/effect/floor_decal/techfloor,
 /turf/simulated/floor/tiled/steel_grid,
@@ -6875,11 +6876,11 @@
 	pixel_y = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 10;
 	icon_state = "corner_white"
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -7153,11 +7154,11 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 10;
 	icon_state = "corner_white"
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -7555,7 +7556,7 @@
 /obj/machinery/alarm{
 	pixel_y = 24
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -11637,7 +11638,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
 "aPb" = (
-/obj/effect/floor_decal/corner/yellow/mono,
+/obj/effect/floor_decal/corner/research/mono,
 /obj/machinery/computer/modular{
 	dir = 8
 	},
@@ -12270,7 +12271,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/firstdeck/centralport)
 "aRb" = (
-/obj/effect/floor_decal/corner/yellow/mono,
+/obj/effect/floor_decal/corner/research/mono,
 /obj/structure/closet/wardrobe/robotics_black,
 /obj/item/clothing/under/rank/roboticist/skirt,
 /obj/item/clothing/under/rank/roboticist/skirt,
@@ -12808,11 +12809,11 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "aSb" = (
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 10;
 	icon_state = "corner_white"
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -14652,7 +14653,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -16246,7 +16247,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "cZS" = (
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -16277,7 +16278,6 @@
 /obj/structure/closet/secure_closet/security_torch,
 /obj/item/stack/medical/advanced/ointment,
 /obj/item/stack/medical/advanced/bruise_pack,
-/obj/item/gunbox,
 /turf/simulated/floor/tiled,
 /area/security/locker)
 "daN" = (
@@ -16660,8 +16660,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/medical/morgue/autopsy)
 "dFH" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 8
+/obj/effect/floor_decal/corner/research{
+	dir = 8;
+	icon_state = "corner_white"
 	},
 /obj/effect/floor_decal/techfloor{
 	dir = 1;
@@ -16903,7 +16904,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/center)
 "dRs" = (
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -20173,7 +20174,7 @@
 /area/crew_quarters/safe_room/firstdeck)
 "iyb" = (
 /obj/structure/table/steel,
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -21632,11 +21633,11 @@
 	dir = 4;
 	pixel_x = 21
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 10;
 	icon_state = "corner_white"
 	},
@@ -21683,7 +21684,7 @@
 	dir = 4;
 	network = list("Medical, Engineering")
 	},
-/obj/effect/floor_decal/corner/yellow/mono,
+/obj/effect/floor_decal/corner/research/mono,
 /turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/laboratory)
 "kfb" = (
@@ -21748,7 +21749,7 @@
 	pixel_x = 0;
 	pixel_y = 30
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -21805,7 +21806,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/command/armoury)
 "knb" = (
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 10;
 	icon_state = "corner_white"
 	},
@@ -22257,8 +22258,9 @@
 /area/maintenance/firstdeck/centralstarboard)
 "kNb" = (
 /obj/item/weapon/stool/padded,
-/obj/effect/floor_decal/corner/yellow{
-	dir = 8
+/obj/effect/floor_decal/corner/research{
+	dir = 8;
+	icon_state = "corner_white"
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics/laboratory)
@@ -22451,7 +22453,7 @@
 /obj/item/weapon/weldpack,
 /obj/item/weapon/reagent_containers/spray/sterilizine,
 /obj/item/weapon/storage/toolbox/mechanical,
-/obj/effect/floor_decal/corner/yellow/mono,
+/obj/effect/floor_decal/corner/research/mono,
 /turf/simulated/floor/tiled/white/monotile,
 /area/assembly/robotics/laboratory)
 "kVi" = (
@@ -22465,7 +22467,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/questioning)
 "kWb" = (
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 10;
 	icon_state = "corner_white"
 	},
@@ -22475,7 +22477,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 10;
 	icon_state = "corner_white"
 	},
@@ -22598,9 +22600,9 @@
 /area/medical/staging)
 "lfb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/effect/floor_decal/corner/yellow/half{
-	dir = 1;
-	icon_state = "bordercolorhalf"
+/obj/effect/floor_decal/corner/research{
+	dir = 5;
+	icon_state = "corner_white"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/hallway/primary/firstdeck/center)
@@ -22625,7 +22627,7 @@
 	pixel_y = 24;
 	req_access = list("ACCESS_ENGINE_EQUIP")
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -24576,8 +24578,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/command/armoury)
 "nxK" = (
-/obj/effect/floor_decal/corner/yellow{
-	dir = 1
+/obj/effect/floor_decal/corner/research{
+	dir = 1;
+	icon_state = "corner_white"
 	},
 /obj/effect/floor_decal/techfloor,
 /obj/effect/shuttle_landmark/lift/robotics_top,
@@ -25130,7 +25133,7 @@
 /obj/item/weapon/folder/yellow,
 /obj/item/weapon/folder/white,
 /obj/item/weapon/folder/yellow,
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -25204,7 +25207,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/firstdeck/fore)
 "ohy" = (
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -25611,7 +25614,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "oMq" = (
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 10;
 	icon_state = "corner_white"
 	},
@@ -25757,7 +25760,6 @@
 /obj/structure/closet/secure_closet/security_torch,
 /obj/item/stack/medical/advanced/ointment,
 /obj/item/stack/medical/advanced/bruise_pack,
-/obj/item/gunbox,
 /turf/simulated/floor/tiled,
 /area/security/locker)
 "oTb" = (
@@ -28005,7 +28007,7 @@
 /obj/structure/closet/hydrant{
 	pixel_y = 32
 	},
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -29168,7 +29170,6 @@
 /obj/structure/closet/secure_closet/security_torch,
 /obj/item/stack/medical/advanced/ointment,
 /obj/item/stack/medical/advanced/bruise_pack,
-/obj/item/gunbox,
 /turf/simulated/floor/tiled,
 /area/security/locker)
 "svb" = (
@@ -29678,7 +29679,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "sVL" = (
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 10;
 	icon_state = "corner_white"
 	},
@@ -31686,7 +31687,7 @@
 	pixel_y = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/effect/floor_decal/corner/yellow{
+/obj/effect/floor_decal/corner/research{
 	dir = 5;
 	icon_state = "corner_white"
 	},
@@ -32173,7 +32174,7 @@
 	dir = 8;
 	icon_state = "techfloor_edges"
 	},
-/obj/effect/floor_decal/corner/yellow,
+/obj/effect/floor_decal/corner/research,
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/assembly/robotics/office)
