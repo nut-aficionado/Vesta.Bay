@@ -939,3 +939,7 @@
 	name = "Himecut Long Ponytail"
 	icon_state = "himecut_long_ponytail"
 	flags = HAIR_TIEABLE
+/datum/sprite_accessory/hair/mullethawk
+	name = "Mullet-Hawk"
+	icon_state = "hair_mullethawk"
+	gender = MALE
