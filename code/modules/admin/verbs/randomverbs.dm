@@ -729,7 +729,7 @@ Ccomp's first proc.
 */
 
 /client/proc/cmd_admin_headset_message(mob/M) //Manaos -> Vesta
-	set category = "Event"
+	set category = "Fun"
 	set name = "Headset Message"
 
 	admin_headset_message(M)
