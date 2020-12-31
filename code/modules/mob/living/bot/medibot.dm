@@ -103,7 +103,7 @@
 		broadcast_medical_hud_message("[src] esta tratando a <b>[H]</b> en <b>[location]</b>", src)
 	busy = 1
 	update_icons()
-	if(do_mob(src, H, 30))
+	if(do_after(src, H, 30))
 		if(target == 1)
 			reagent_glass.reagents.trans_to_mob(H, injection_amount, CHEM_BLOOD)
 		else
