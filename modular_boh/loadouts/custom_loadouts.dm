@@ -510,3 +510,13 @@ datum/gear/head/ECdepartment/New()
 /datum/gear/augmentation/implanted_circuitkit/right
 	display_name = "circuit augment - right arm (ROBOTIC)"
 	path = /obj/item/organ/internal/augment/active/simple/circuit/right
+
+/datum/gear/augmentation/implante_cristalino
+	display_name = "Implante de ingenieria adherente - Filamento IZQUIERDO"
+	path = /obj/item/organ/internal/augment/active/polytool/adherenttool/left
+	cost = 4
+	whitelisted = list(SPECIES_ADHERENT)
+
+/datum/gear/augmentation/implante_cristalino/right
+	display_name = "Implante de ingenieria adherente - Filamento DERECHO"
+	path = /obj/item/organ/internal/augment/active/polytool/adherenttool/right

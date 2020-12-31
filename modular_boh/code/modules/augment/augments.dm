@@ -17,3 +17,9 @@
 
 /obj/item/organ/internal/augment/active/simple/circuit/right
 	allowed_organs = list(BP_AUGMENT_R_ARM)
+
+/obj/item/organ/internal/augment/active/polytool/adherenttool/left
+	allowed_organs = list(BP_AUGMENT_L_ARM)
+
+/obj/item/organ/internal/augment/active/polytool/adherenttool/right
+	allowed_organs = list(BP_AUGMENT_R_ARM)

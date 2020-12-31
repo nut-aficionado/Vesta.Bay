@@ -13,6 +13,19 @@
 		/obj/item/device/multitool/finger
 	)
 
+/obj/item/organ/internal/augment/active/polytool/adherenttool
+	name = "herramientas adherentes"
+	action_button_name = "Desplegar Herramienta Cristalina"
+	desc = "Este aumento cristalino, implantado en varias unidades adherentes especializadas, contiene todo lo que un ingeniero podria necesitar."
+	paths = list(
+		/obj/item/weapon/weldingtool/electric/crystal,
+		/obj/item/weapon/wirecutters/crystal,
+		/obj/item/weapon/screwdriver/crystal,
+		/obj/item/weapon/crowbar/crystal,
+		/obj/item/weapon/wrench/crystal,
+		/obj/item/device/multitool/crystal
+	)
+
 /obj/item/weapon/weldingtool/finger
 	name = "digital welder"
 	desc = "A precise, high quality welding tool."
