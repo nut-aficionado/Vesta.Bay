@@ -34,15 +34,22 @@ var/const/INF               =(1<<11)
 	skill_points = 24
 	is_whitelisted = TRUE
 	minimum_character_age = list(SPECIES_HUMAN = 25)
-	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
+	min_skill = list(   SKILL_CONSTRUCTION = SKILL_BASIC,
+						SKILL_ELECTRICAL   = SKILL_BASIC,
+						SKILL_BUREAUCRACY = SKILL_BASIC,
 						SKILL_EVA         = SKILL_ADEPT,
 						SKILL_PILOT       = SKILL_BASIC,
+						SKILL_ANATOMY      = SKILL_BASIC,
 						SKILL_COMBAT      = SKILL_ADEPT,
 						SKILL_WEAPONS     = SKILL_ADEPT)
 
 	max_skill = list(	SKILL_COMBAT      = SKILL_PROF,
 						SKILL_WEAPONS     = SKILL_PROF,
 						SKILL_EVA		  = SKILL_EXPERT,
+						SKILL_CONSTRUCTION = SKILL_EXPERT,
+						SKILL_ELECTRICAL   = SKILL_EXPERT,
+						SKILL_MEDICAL      = SKILL_EXPERT,
+						SKILL_ANATOMY      = SKILL_EXPERT,
 						SKILL_HAULING     = SKILL_PROF)
 
 	software_on_spawn = list(/datum/computer_file/program/deck_management,
@@ -96,13 +103,6 @@ var/const/INF               =(1<<11)
 	access = list(access_maint_tunnels, access_petrov, access_petrov_security,
 			            access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar, access_guppy_helm, access_infantry,
 			            access_inftech, access_aquila, access_eva)
-
-/datum/job/combat_tech/is_position_available()
-	if(..())
-		for(var/mob/M in GLOB.player_list)
-			if(M.client && M.mind && M.mind.assigned_role == "Squad Lead")
-				return TRUE
-	return FALSE
 
 /datum/job/combat_tech/get_description_blurb()
 	return "<span class='warning'>You are NOT Security. Ignoring this will get you job banned, or worse.</span> - You are the singular Combat Technician in the squad. Your duty is to provide both firepower and demolitions as required. You may assume Command if no Squad Leader is present."
