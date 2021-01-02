@@ -414,7 +414,6 @@
 						SKILL_SCIENCE     = SKILL_MAX)
 	skill_points = 20
 
-
 	access = list(
 		access_security, access_medical, access_engine, access_maint_tunnels, access_emergency_storage,
 		access_bridge, access_janitor, access_kitchen, access_cargo, access_mailsorting, access_RC_announce, access_keycard_auth,
