@@ -3144,6 +3144,8 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "manaos\code\modules\clothing\suits\labcoat.dm"
+#include "manaos\code\modules\projectile\automatic.dm"
+#include "manaos\code\modules\projectile\ammunition\boxes.dm"
 #include "manaos\code\modules\sprite_accessories\_accessory_hair.dm"
 #include "manaos\maps\torch\items\clothing\manaos-suit.dm"
 #include "maps\_map_include.dm"
