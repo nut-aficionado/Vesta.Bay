@@ -20,7 +20,7 @@
 	)
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_ADEPT,
 	                    SKILL_EVA         = SKILL_BASIC,
-	                    SKILL_COMBAT      = SKILL_BASIC,
+	                    SKILL_COMBAT      = SKILL_ADEPT,
 	                    SKILL_WEAPONS     = SKILL_ADEPT,
 	                    SKILL_FORENSICS   = SKILL_BASIC)
 
@@ -33,7 +33,7 @@
 		access_security, access_brig, access_armory, access_forensics_lockers,
 		access_maint_tunnels, access_external_airlocks, access_emergency_storage,
 		access_eva, access_sec_doors, access_solgov_crew, access_gun, access_torch_fax,
-		access_radio_sec
+		access_radio_sec, access_hangar //vesta edit so security can go into the hangar like everyone else
 	)
 
 	minimal_access = list()
@@ -86,7 +86,7 @@
 		access_security, access_brig, access_forensics_lockers,
 		access_maint_tunnels, access_emergency_storage,
 		access_sec_doors, access_solgov_crew, access_morgue,
-		access_torch_fax, access_radio_sec
+		access_torch_fax, access_radio_sec, access_hangar
 	)
 
 	minimal_access = list()
@@ -129,7 +129,7 @@
 		access_security, access_brig, access_maint_tunnels,
 		access_external_airlocks, access_emergency_storage,
 		access_eva, access_sec_doors, access_solgov_crew,
-		access_radio_sec
+		access_radio_sec, access_hangar //vesta edit so security can go into the hangar like everyone else
 	)
 
 	minimal_access = list()
