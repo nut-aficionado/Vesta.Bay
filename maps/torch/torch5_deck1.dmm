@@ -16810,6 +16810,7 @@
 /obj/item/weapon/reagent_containers/glass/bottle/antitoxin,
 /obj/item/weapon/reagent_containers/glass/bottle/antitoxin,
 /obj/item/weapon/reagent_containers/glass/bottle/antitoxin,
+/obj/item/weapon/storage/box/monkeycubes,
 /obj/item/weapon/reagent_containers/glass/bottle/inaprovaline,
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
