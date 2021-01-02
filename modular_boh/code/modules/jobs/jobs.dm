@@ -34,15 +34,22 @@ var/const/INF               =(1<<11)
 	skill_points = 24
 	is_whitelisted = TRUE
 	minimum_character_age = list(SPECIES_HUMAN = 25)
-	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
+	min_skill = list(   SKILL_CONSTRUCTION = SKILL_BASIC,
+						SKILL_ELECTRICAL   = SKILL_BASIC,
+						SKILL_BUREAUCRACY = SKILL_BASIC,
 						SKILL_EVA         = SKILL_ADEPT,
 						SKILL_PILOT       = SKILL_BASIC,
+						SKILL_ANATOMY      = SKILL_BASIC,
 						SKILL_COMBAT      = SKILL_ADEPT,
 						SKILL_WEAPONS     = SKILL_ADEPT)
 
 	max_skill = list(	SKILL_COMBAT      = SKILL_PROF,
 						SKILL_WEAPONS     = SKILL_PROF,
 						SKILL_EVA		  = SKILL_EXPERT,
+						SKILL_CONSTRUCTION = SKILL_EXPERT,
+						SKILL_ELECTRICAL   = SKILL_EXPERT,
+						SKILL_MEDICAL      = SKILL_EXPERT,
+						SKILL_ANATOMY      = SKILL_EXPERT,
 						SKILL_HAULING     = SKILL_PROF)
 
 	software_on_spawn = list(/datum/computer_file/program/deck_management,
@@ -96,13 +103,6 @@ var/const/INF               =(1<<11)
 	access = list(access_maint_tunnels, access_petrov, access_petrov_security,
 			            access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar, access_guppy_helm, access_infantry,
 			            access_inftech, access_aquila, access_eva)
-
-/datum/job/combat_tech/is_position_available()
-	if(..())
-		for(var/mob/M in GLOB.player_list)
-			if(M.client && M.mind && M.mind.assigned_role == "Squad Lead")
-				return TRUE
-	return FALSE
 
 /datum/job/combat_tech/get_description_blurb()
 	return "<span class='warning'>You are NOT Security. Ignoring this will get you job banned, or worse.</span> - You are the singular Combat Technician in the squad. Your duty is to provide both firepower and demolitions as required. You may assume Command if no Squad Leader is present."
@@ -159,8 +159,6 @@ var/const/INF               =(1<<11)
 	title = "Psionic Advisor"
 	department = "Support"
 	department_flag = SPT
-	department = "Civilian"
-	department_flag = CIV
 	selection_color = "#2f2f7f"
 	total_positions = 1
 	spawn_positions = 1
@@ -246,7 +244,7 @@ var/const/INF               =(1<<11)
 //## SEA
 
 /datum/job/sea	//Overrides it to make it like ours @r4iser
-	title = "Senior Enlisted Advisor"
+	title = "NTEF Senior Enlisted Advisor"
 	department = "Support"
 	department_flag = SPT
 	total_positions = 1
@@ -262,9 +260,10 @@ var/const/INF               =(1<<11)
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/fleet/e8,
-		/datum/mil_rank/fleet/e9_alt1,
-		/datum/mil_rank/fleet/e9
+		/datum/mil_rank/fleet/e9,
+		/datum/mil_rank/fleet/e9_alt1
 	)
+
 	min_skill = list(   SKILL_EVA        = SKILL_BASIC,
 	                    SKILL_COMBAT     = SKILL_BASIC,
 	                    SKILL_WEAPONS    = SKILL_ADEPT)
@@ -291,19 +290,18 @@ var/const/INF               =(1<<11)
 	return "You are the Senior Enlisted Advisor. You are the highest enlisted person on the ship. You are directly subordinate to the CO. You advise them on enlisted concerns and provide expertise and advice to officers. You are responsible for ensuring discipline and good conduct among enlisted, as well as notifying officers of any issues and \"advising\" them on mistakes they make. You also handle various duties on behalf of the CO and XO. You are an experienced enlisted person, very likely equal only in experience to the CO and XO. You know the regulations better than anyone."
 
 /datum/job/sea/marine
-	title = "SMC Attache"
-	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/sea/marineattache
-	minimum_character_age = list(SPECIES_HUMAN = 21,SPECIES_UNATHI = 21,SPECIES_SERGAL = 21, SPECIES_SKRELL = 21, SPECIES_PROMETHEAN = 21, SPECIES_YEOSA = 21, SPECIES_VASS = 21, SPECIES_TAJ = 21, SPECIES_CUSTOM = 21, SPECIES_AKULA = 21)
+	title = "SMC Senior Enlisted Advisor"
+	department = "Support"
+	department_flag = SPT
+	outfit_type = /decl/hierarchy/outfit/job/torch/crew/command/sea/marine
+	minimum_character_age = list(SPECIES_HUMAN = 35,SPECIES_UNATHI = 35,SPECIES_SERGAL = 35, SPECIES_SKRELL = 35, SPECIES_PROMETHEAN = 35, SPECIES_YEOSA = 35, SPECIES_VASS = 35, SPECIES_TAJ = 35, SPECIES_CUSTOM = 35, SPECIES_AKULA = 35)
 	allowed_branches = list(
 		/datum/mil_branch/marine_corps
 	)
 	allowed_ranks = list(
 		/datum/mil_rank/marine_corps/e8_alt,
 		/datum/mil_rank/marine_corps/e9,
-		/datum/mil_rank/marine_corps/e9_alt,
-		/datum/mil_rank/marine_corps/o1,
-		/datum/mil_rank/marine_corps/o2,
-		/datum/mil_rank/marine_corps/o3
+		/datum/mil_rank/marine_corps/e9_alt
 	)
 
 //## RESEARCH ROBOTICIST
@@ -329,11 +327,11 @@ var/const/INF               =(1<<11)
 		/datum/mil_branch/fleet = /decl/hierarchy/outfit/job/torch/crew/research/roboticist/fleet,
 		/datum/mil_branch/civilian)
 	allowed_ranks = list(
-		/datum/mil_rank/fleet/e4,
 		/datum/mil_rank/fleet/e5,
 		/datum/mil_rank/fleet/e6,
-		/datum/mil_rank/fleet/o1,
-		/datum/mil_rank/fleet/o2,
+		/datum/mil_rank/fleet/e7,
+		/datum/mil_rank/fleet/w1,
+		/datum/mil_rank/fleet/w2,
 		/datum/mil_rank/civ/contractor
 		)
 	min_skill = list(   SKILL_COMPUTER		= SKILL_ADEPT,
@@ -353,3 +351,6 @@ var/const/INF               =(1<<11)
 
 	access = list(access_maint_tunnels, access_research, access_robotics, access_nanotrasen, access_solgov_crew, access_surgery, access_medical)
 	minimal_access = list()
+
+/datum/job/roboticist/get_description_blurb()
+	return "You are the Roboticist. You are responsible for repairing, upgrading and handling ship synthetics (like robots). You are also responsible for the production of exosuits(mechs) and bots for various departments. You answer to the Chief Science Officer."

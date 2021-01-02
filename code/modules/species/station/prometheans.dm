@@ -5,7 +5,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 
 	name =             SPECIES_PROMETHEAN
 	name_plural =      "Prometheans"
-	description =            "What has Science done?"
+	description =      "Prometheans, also known as slime people by most, have mutated naturally, or in laboratory conditions, and have achieved sentience."
 	show_ssd =         "totally quiescent"
 	death_message =    "rapidly loses cohesion, splattering across the ground..."
 	knockout_message = "collapses inwards, forming a disordered puddle of goo."
@@ -24,8 +24,8 @@ var/datum/species/shapeshifter/promethean/prometheans
 	swap_flags =       MONKEY|SLIME|SIMPLE_ANIMAL
 	push_flags =       MONKEY|SLIME|SIMPLE_ANIMAL
 	species_flags =    SPECIES_FLAG_NO_SCAN | SPECIES_FLAG_NO_SLIP | SPECIES_FLAG_NO_MINOR_CUT
-	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | RADIATION_GLOWS
-	spawn_flags =      SPECIES_IS_RESTRICTED | SPECIES_NO_LACE
+	appearance_flags = HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_HAIR_COLOR | RADIATION_GLOWS | HAS_UNDERWEAR
+	spawn_flags =      SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN | SPECIES_NO_ROBOTIC_INTERNAL_ORGANS | SPECIES_NO_LACE
 
 	breath_type = null
 	poison_types = null
@@ -67,7 +67,7 @@ var/datum/species/shapeshifter/promethean/prometheans
 		/mob/living/carbon/human/proc/shapeshifter_select_gender
 		)
 
-	valid_transform_species = list(SPECIES_HUMAN, SPECIES_UNATHI, SPECIES_SKRELL, SPECIES_DIONA, SPECIES_MANTID_ALATE, SPECIES_MONKEY)
+	valid_transform_species = list(SPECIES_HUMAN,SPECIES_UNATHI,SPECIES_OLDUNATHI,SPECIES_SKRELL,SPECIES_VULP,SPECIES_AKULA,SPECIES_TAJ,SPECIES_DIONA)
 	monochromatic = 1
 
 	var/heal_rate = 5 // Temp. Regen per tick.
