@@ -31,7 +31,7 @@ var/const/INF               =(1<<11)
 	selection_color = "#557e38"
 	minimal_player_age = 12
 	economic_power = 7
-	skill_points = 26
+	skill_points = 24
 	is_whitelisted = TRUE
 	minimum_character_age = list(SPECIES_HUMAN = 25)
 	min_skill = list(   SKILL_CONSTRUCTION = SKILL_BASIC,
@@ -75,7 +75,7 @@ var/const/INF               =(1<<11)
 	selection_color = "#557e38"
 	economic_power = 4
 	minimal_player_age = 8
-	skill_points = 22
+	skill_points = 24
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/infantry/combat_tech
 	minimum_character_age = list(SPECIES_HUMAN = 20)
 	min_skill = list(	SKILL_CONSTRUCTION = SKILL_ADEPT,
@@ -178,7 +178,7 @@ var/const/INF               =(1<<11)
 		SKILL_COMBAT     = SKILL_EXPERT,
 		SKILL_WEAPONS     = SKILL_EXPERT
 	)
-	skill_points = 24
+	skill_points = 30
 	access = list(access_psiadvisor, access_security, access_medical, access_engine, access_maint_tunnels, access_external_airlocks,
 				access_eva, access_bridge, access_cargo, access_RC_announce, access_solgov_crew, access_hangar)
 	minimal_access = list()
@@ -336,9 +336,12 @@ var/const/INF               =(1<<11)
 		)
 	min_skill = list(   SKILL_COMPUTER		= SKILL_ADEPT,
 	                    SKILL_DEVICES		= SKILL_ADEPT,
-	                    SKILL_EVA           = SKILL_ADEPT,
-	                    SKILL_ANATOMY       = SKILL_ADEPT,
-	                    SKILL_MECH          = HAS_PERK)
+	                    SKILL_ANATOMY       = SKILL_EXPERT,
+	                    SKILL_SCIENCE     	= SKILL_ADEPT,
+	                    SKILL_MEDICAL     	= SKILL_ADEPT,
+	                    SKILL_MECH          = HAS_PERK,
+	                    SKILL_ELECTRICAL    = SKILL_BASIC,
+	                    SKILL_CONSTRUCTION  = SKILL_BASIC)
 
 	max_skill = list(   SKILL_CONSTRUCTION = SKILL_MAX,
 	                    SKILL_ELECTRICAL   = SKILL_MAX,
@@ -346,8 +349,8 @@ var/const/INF               =(1<<11)
 	                    SKILL_ENGINES      = SKILL_EXPERT,
 	                    SKILL_DEVICES      = SKILL_MAX,
 	                    SKILL_MEDICAL      = SKILL_EXPERT,
-	                    SKILL_ANATOMY      = SKILL_EXPERT)
-	skill_points = 22
+	                    SKILL_ANATOMY      = SKILL_MAX)
+	skill_points = 24
 
 	access = list(access_maint_tunnels, access_research, access_robotics, access_nanotrasen, access_solgov_crew, access_surgery, access_medical)
 	minimal_access = list()

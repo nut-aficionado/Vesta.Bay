@@ -175,7 +175,7 @@
 	max_skill = list(   SKILL_MEDICAL     = SKILL_MAX,
 	                    SKILL_ANATOMY     = SKILL_MAX,
 	                    SKILL_CHEMISTRY   = SKILL_MAX)
-	skill_points = 24
+	skill_points = 26
 
 	access = list(
 		access_medical, access_morgue, access_maint_tunnels, access_external_airlocks, access_emergency_storage,
@@ -409,9 +409,9 @@
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_PILOT       = SKILL_ADEPT)
 
-	max_skill = list(   SKILL_PILOT       = SKILL_MAX)
+	max_skill = list(   SKILL_PILOT       = SKILL_MAX,
+						SKILL_SCIENCE     = SKILL_MAX)
 	skill_points = 20
-
 
 	access = list(
 		access_security, access_medical, access_engine, access_maint_tunnels, access_emergency_storage,
