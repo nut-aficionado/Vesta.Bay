@@ -32,7 +32,7 @@
 	access = list(
 		access_maint_tunnels, access_bridge, access_emergency_storage, access_tech_storage,  access_cargo, access_guppy_helm,
 		access_cargo_bot, access_qm, access_mailsorting, access_solgov_crew, access_expedition_shuttle, access_guppy, access_hangar,
-		access_mining, access_mining_office, access_mining_station, access_commissary, access_teleporter, access_eva, access_torch_fax,
+		access_mining, access_mining_office, access_mining_station, access_commissary, access_teleporter, access_eva, access_external_airlocks, access_torch_fax,
 		access_radio_sup, access_radio_exp, access_radio_comm
 	)
 
@@ -88,7 +88,7 @@
 	department_flag = SUP
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "the Deck Chief, the Corporate Liaison and the Executive Officer"
+	supervisors = "the Deck Chief and the Executive Officer"
 	economic_power = 7
 	minimum_character_age = list(SPECIES_HUMAN = 18)
 	ideal_character_age = 25
@@ -97,7 +97,8 @@
 		"Shaft Miner",
 		"Salvage Technician")
 	min_skill = list(   SKILL_HAULING = SKILL_ADEPT,
-	                    SKILL_EVA     = SKILL_BASIC)
+	                    SKILL_EVA     = SKILL_BASIC,
+	                    SKILL_PILOT   = SKILL_BASIC)
 
 	max_skill = list(   SKILL_PILOT       = SKILL_MAX)
 

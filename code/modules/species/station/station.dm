@@ -125,9 +125,9 @@
 	health_hud_intensity = 1.75
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/fish/octopus
 	bone_material = MATERIAL_BONE_CARTILAGE
-	genders = list(PLURAL)
+	genders = list(PLURAL, NEUTER, MALE, FEMALE)
 	hidden_from_codex = FALSE
-	min_age = 19
+	min_age = 18
 	max_age = 90
 
 	burn_mod = 0.9
