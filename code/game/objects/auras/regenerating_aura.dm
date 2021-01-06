@@ -3,6 +3,7 @@
 	var/brute_mult = 1
 	var/fire_mult = 1
 	var/tox_mult = 1
+	var/oxy_mult = 0
 
 /obj/aura/regenerating/life_tick()
 	user.adjustBruteLoss(-brute_mult)
@@ -42,6 +43,9 @@
 		H.adjust_nutrition(-nutrition_damage_mult)
 	if(tox_mult && H.getToxLoss())
 		H.adjustToxLoss(-tox_mult * config.organ_regeneration_multiplier)
+		H.adjust_nutrition(-nutrition_damage_mult)
+	if(oxy_mult && H.getOxyLoss())
+		H.adjustToxLoss(-oxy_mult * config.organ_regeneration_multiplier)
 		H.adjust_nutrition(-nutrition_damage_mult)
 
 	if(!can_regenerate_organs())
@@ -174,6 +178,21 @@
 	to_chat(H, "<span class='warning'>Some of your nymphs split and hurry to reform your [O.name].</span>")
 	H.adjust_nutrition(-external_nutrition_mult)
 
+/obj/aura/regenerating/human/promethean
+	brute_mult = 3
+	fire_mult = 3
+	tox_mult = 3
+	oxy_mult = 3
+	nutrition_damage_mult = 2
+	organ_mult = 2
+	regen_message = "<span class='warning'>You feel a soothing sensation within your ORGAN.</span>"
+	grow_chance = 20
+	grow_threshold = 50
+	external_nutrition_mult = 10
+
+/obj/aura/regenerating/human/promethean/external_regeneration_effect(var/obj/item/organ/external/O, var/mob/living/carbon/human/H)
+	to_chat(H, "<span class='warning'>You feel a slithering sensation as your [O.name] reforms.</span>")
+	H.adjust_nutrition(-external_nutrition_mult)
 /obj/aura/regenerating/human/unathi/yeosa
 	brute_mult = 1.5
 	organ_mult = 3

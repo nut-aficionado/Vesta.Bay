@@ -136,7 +136,7 @@
 		access_petrov_analysis, access_petrov_phoron, access_petrov_toxins, access_petrov_chemistry, access_petrov_rd,
 		access_petrov_security, access_petrov_maint, access_pathfinder, access_explorer, access_eva, access_solgov_crew,
 		access_expedition_shuttle, access_expedition_shuttle_helm, access_maint_tunnels, access_torch_fax, access_radio_comm,
-		access_radio_sci, access_radio_exp
+		access_radio_sci, access_radio_exp, access_torch_helm
 	)
 
 	minimal_access = list()
@@ -336,6 +336,13 @@
 /datum/job/representative/get_description_blurb()
 	return "You are the Sol Gov Representative. You are a civilian assigned as both a diplomatic liaison for first contact and foreign affair situations on board. You are also responsible for monitoring for any serious missteps of justice, sol law or other ethical or legal issues aboard and informing and advising the Commanding Officer of them. You are a mid-level bureaucrat. You liaise between the crew and corporate interests on board. Send faxes back to Sol on mission progress and important events."
 
+
+/datum/job/representative/post_equip_rank(var/mob/person)
+	for(var/mob/M in GLOB.player_list)
+		if(M.client && M.mind)
+			if(M.mind.assigned_role == "Federal Protecion Agent")
+				to_chat(M, SPAN_NOTICE("<b>The SolGov Representative, [person.real_name], is present on [GLOB.using_map.full_name].</b>"))
+
 /datum/job/sea
 	title = "Senior Enlisted Advisor"
 	department = "Support"
@@ -409,9 +416,9 @@
 	min_skill = list(   SKILL_BUREAUCRACY = SKILL_BASIC,
 	                    SKILL_PILOT       = SKILL_ADEPT)
 
-	max_skill = list(   SKILL_PILOT       = SKILL_MAX)
+	max_skill = list(   SKILL_PILOT       = SKILL_MAX,
+						SKILL_SCIENCE     = SKILL_MAX)
 	skill_points = 20
-
 
 	access = list(
 		access_security, access_medical, access_engine, access_maint_tunnels, access_emergency_storage,

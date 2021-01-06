@@ -3,7 +3,7 @@
 	department = "Medical"
 	department_flag = MED
 	minimal_player_age = 2
-	minimum_character_age = list(SPECIES_HUMAN = 29)
+	minimum_character_age = list(SPECIES_HUMAN = 26)
 	ideal_character_age = 45
 	total_positions = 2
 	spawn_positions = 2
@@ -33,7 +33,7 @@
 	max_skill = list(   SKILL_MEDICAL     = SKILL_MAX,
 	                    SKILL_ANATOMY     = SKILL_MAX,
 	                    SKILL_CHEMISTRY   = SKILL_MAX)
-	skill_points = 20
+	skill_points = 16
 
 	access = list(
 		access_medical, access_morgue, access_virology, access_maint_tunnels, access_emergency_storage,
@@ -49,13 +49,15 @@
 	department = "Medical"
 	department_flag = MED
 	minimal_player_age = 2
-	minimum_character_age = list(SPECIES_HUMAN = 24)
+	minimum_character_age = list(SPECIES_HUMAN = 22)
 	ideal_character_age = 45
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "Physicians and the Chief Medical Officer"
 	selection_color = "#013d3b"
 	economic_power = 6
+	alt_titles = list(
+		"Nurse")
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/senior
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
@@ -76,7 +78,7 @@
 	max_skill = list(   SKILL_MEDICAL     = SKILL_MAX,
 	                    SKILL_ANATOMY     = SKILL_MAX,
 	                    SKILL_CHEMISTRY   = SKILL_MAX)
-	skill_points = 16
+	skill_points = 14
 
 	access = list(
 		access_medical, access_morgue, access_virology, access_maint_tunnels, access_emergency_storage,
@@ -132,7 +134,7 @@
 
 	software_on_spawn = list(/datum/computer_file/program/suit_sensors,
 							 /datum/computer_file/program/camera_monitor)
-	skill_points = 22
+	skill_points = 20
 
 /datum/job/medical_trainee
 	title = "Trainee Medical Technician"
@@ -146,7 +148,6 @@
 	ideal_character_age = 20
 	alt_titles = list(
 		"Corpsman Trainee")
-
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/doctor
 	allowed_branches = list(
 		/datum/mil_branch/expeditionary_corps,
@@ -188,7 +189,7 @@
 	department_flag = MED
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "the Chief Medical Officer, the Corporate Liaison and Medical Personnel"
+	supervisors = "the Chief Medical Officer and Physicians"
 	selection_color = "#013d3b"
 	economic_power = 4
 	minimum_character_age = list(SPECIES_HUMAN = 25)
@@ -197,11 +198,11 @@
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/medical/contractor/chemist
 	allowed_branches = list(/datum/mil_branch/civilian)
 	allowed_ranks = list(/datum/mil_rank/civ/contractor)
-	min_skill = list(   SKILL_MEDICAL   = SKILL_BASIC,
+	min_skill = list(   SKILL_MEDICAL   = SKILL_ADEPT,
 	                    SKILL_CHEMISTRY = SKILL_ADEPT)
 
-	max_skill = list(   SKILL_MEDICAL     = SKILL_BASIC,
-						SKILL_ANATOMY	  = SKILL_BASIC,
+	max_skill = list(   SKILL_MEDICAL     = SKILL_ADEPT,
+						SKILL_ANATOMY	  = SKILL_ADEPT,
 	                    SKILL_CHEMISTRY   = SKILL_MAX)
 	skill_points = 16
 
@@ -214,7 +215,7 @@
 	minimal_access = list()
 
 /datum/job/chemist/get_description_blurb()
-	return "You are a Laboratory Technician. You make medicine. You are not a doctor or medic, but have surface level knowledge in those fields. You should not be treating patients, but rather providing the the medicine to do so. You are subordinate to Physicians and Medical Techncians."
+	return "You are a Laboratory Technician. You make medicine. You are not a doctor or medic, but have surface level knowledge in those fields. You should not be treating patients, but rather providing the the medicine to do so. You are subordinate to Physicians and the Chief Medical Officer."
 
 /datum/job/psychiatrist
 	title = "Counselor"
