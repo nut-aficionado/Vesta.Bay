@@ -209,6 +209,7 @@
 	name = "\improper Pug"
 	real_name = "Pug"
 	desc = "Es un pug."
+	icon = 'manaos/icons/mob/simple_animal/animal.dmi'
 	icon_state = "pug"
 	icon_living = "pug"
 	icon_dead = "pug_dead"
@@ -233,6 +234,7 @@
 	name = "\improper Borgi"
 	real_name = "Borgi"
 	desc = "Mmh... me recuerda a... alguien..."
+	icon = 'manaos/icons/mob/simple_animal/animal.dmi'
 	icon_state = "borgi"
 	icon_living = "borgi"
 	icon_dead = "borgi_dead"

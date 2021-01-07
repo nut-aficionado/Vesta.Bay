@@ -298,6 +298,7 @@ var/global/chicken_count = 0
 /mob/living/simple_animal/hostile/retaliate/Kanguro
 	name = "Kanguro"
 	desc = "Ese es... n-no puede ser..."
+	icon = 'manaos/icons/mob/simple_animal/animal.dmi'
 	icon_state = "kangaroo"
 	icon_living = "kangaroo"
 	icon_dead = "kangaroo_dead"
