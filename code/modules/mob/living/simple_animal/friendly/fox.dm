@@ -4,6 +4,10 @@
 	desc = "A domesticated, feline pet. Has a tendency to adopt crewmembers."
 	icon_state = "fox"
 	item_state = "fox"
+	item_icons = list(
+		slot_l_hand_str = 'manaos/icons/mob/onmob/items/lefthand_holder.dmi',
+		slot_r_hand_str = 'manaos/icons/mob/onmob/items/righthand_holder.dmi',
+		)
 	icon_living = "fox"
 	icon_dead = "fox_dead"
 	speak = list("Tchoof!","Bark!","Ack-Ack!","Awoo!")
@@ -219,6 +223,10 @@
 	desc = "Dirías que es mejor no llamarla con el -san, solo por si viene alguien."
 	gender = FEMALE
 	icon_state = "senko"
+	item_icons = list(
+		slot_l_hand_str = 'manaos/icons/mob/onmob/items/lefthand_holder.dmi',
+		slot_r_hand_str = 'manaos/icons/mob/onmob/items/righthand_holder.dmi',
+		)
 	item_state = "senko"
 	icon_living = "senko"
 	icon_dead = "senko_dead"
