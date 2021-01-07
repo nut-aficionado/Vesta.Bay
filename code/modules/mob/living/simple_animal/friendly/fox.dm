@@ -2,7 +2,7 @@
 /mob/living/simple_animal/fox
 	name = "fox"
 	desc = "A domesticated, feline pet. Has a tendency to adopt crewmembers."
-	icon = "manaos/icons/mob/simple_animal/animal.dmi"
+	icon = 'manaos/icons/mob/simple_animal/animal.dmi'
 	icon_state = "fox"
 	item_state = "fox"
 	icon_living = "fox"
@@ -219,7 +219,7 @@
 	name = "Senko-san"
 	desc = "Dirías que es mejor no llamarla con el -san, solo por si viene alguien."
 	gender = FEMALE
-	icon = "manaos/icons/mob/simple_animal/animal.dmi"
+	icon = 'manaos/icons/mob/simple_animal/animal.dmi'
 	icon_state = "senko"
 	item_state = "senko"
 	icon_living = "senko"
