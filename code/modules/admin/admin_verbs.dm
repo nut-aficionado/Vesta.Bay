@@ -47,6 +47,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/cmd_admin_narrate,
 	/client/proc/cmd_admin_direct_narrate,	//send text directly to a player with no padding. Useful for narratives and fluff-text,
 	/client/proc/cmd_admin_visible_narrate,
+	/client/proc/cmd_admin_headset_message,
 	/client/proc/cmd_admin_audible_narrate,
 	/client/proc/cmd_admin_local_narrate,
 	/client/proc/cmd_admin_world_narrate,	//sends text to all players with no padding,
@@ -152,6 +153,9 @@ var/list/admin_verbs_server = list(
 	/datum/admins/proc/adspawn,
 	/datum/admins/proc/adjump,
 	/client/proc/toggle_random_events,
+	/datum/admins/proc/panicbunker,
+	/datum/admins/proc/addbunkerbypass,
+	/datum/admins/proc/revokebunkerbypass,
 	/client/proc/nanomapgen_DumpImage
 	)
 var/list/admin_verbs_debug = list(
@@ -277,6 +281,9 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/air_report,
 	/client/proc/enable_debug_verbs,
 	/client/proc/roll_dices,
+	/datum/admins/proc/panicbunker,
+	/datum/admins/proc/addbunkerbypass,
+	/datum/admins/proc/revokebunkerbypass,
 	/proc/possess,
 	/proc/release
 	)

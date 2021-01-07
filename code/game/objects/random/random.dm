@@ -367,7 +367,40 @@
 				/obj/item/toy/figure/warden,
 				/obj/item/toy/figure/psychologist,
 				/obj/item/toy/figure/paramedic,
-				/obj/item/toy/figure/ert)
+				/obj/item/toy/figure/ert,
+				/obj/item/toy/figure/aleph,
+				/obj/item/toy/figure/alicia,
+				/obj/item/toy/figure/alysson,
+				/obj/item/toy/figure/ana,
+				/obj/item/toy/figure/angelina,
+				/obj/item/toy/figure/area,
+				/obj/item/toy/figure/ariel,
+				/obj/item/toy/figure/arkin,
+				/obj/item/toy/figure/bruno,
+				/obj/item/toy/figure/camilo,
+				/obj/item/toy/figure/connor,
+				/obj/item/toy/figure/dana,
+				/obj/item/toy/figure/darkness,
+				/obj/item/toy/figure/duck,
+				/obj/item/toy/figure/franco,
+				/obj/item/toy/figure/hal,
+				/obj/item/toy/figure/honkito,
+				/obj/item/toy/figure/jr,
+				/obj/item/toy/figure/kans,
+				/obj/item/toy/figure/louie,
+				/obj/item/toy/figure/manuel,
+				/obj/item/toy/figure/priscilla,
+				/obj/item/toy/figure/sam,
+				/obj/item/toy/figure/slimy,
+				/obj/item/toy/figure/smug,
+				/obj/item/toy/figure/suki,
+				/obj/item/toy/figure/sydney1,
+				/obj/item/toy/figure/sydney2,
+				/obj/item/toy/figure/uzume,
+				/obj/item/toy/figure/vaum,
+				/obj/item/toy/figure/vlad,
+				/obj/item/toy/figure/wh,
+				/obj/item/toy/figure/zsle)
 
 
 /obj/random/plushie
@@ -820,7 +853,7 @@ obj/random/obstruction/spawn_choices()
 	name = "random suit"
 	desc = "This is a random piece of outerwear."
 	icon = 'icons/obj/clothing/obj_suit.dmi'
-	icon_state = "fire"
+	icon_state = "syndicate"
 
 /obj/random/suit/spawn_choices()
 	return list(/obj/item/clothing/suit/storage/hazardvest = 4,
@@ -1070,8 +1103,8 @@ something, make sure it's not in one of the other lists.*/
 /obj/random/hostile
 	name = "Random Hostile Mob"
 	desc = "This is a random hostile mob."
-	icon = 'icons/mob/amorph.dmi'
-	icon_state = "standing"
+	icon = 'icons/mob/crow.dmi'
+	icon_state = "crow"
 	spawn_nothing_percentage = 80
 
 obj/random/hostile/spawn_choices()

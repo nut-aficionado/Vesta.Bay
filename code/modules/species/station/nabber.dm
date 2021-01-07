@@ -13,7 +13,7 @@
 	antaghud_offset_y = 8
 
 	assisted_langs = list(LANGUAGE_GUTTER, LANGUAGE_UNATHI_SINTA, LANGUAGE_SKRELLIAN, LANGUAGE_HUMAN_EURO, LANGUAGE_EAL, LANGUAGE_HUMAN_RUSSIAN)
-	min_age = 8
+	min_age = 10
 	max_age = 40
 
 	skin_material = MATERIAL_SKIN_CHITIN
@@ -326,8 +326,7 @@
 
 /datum/species/nabber/handle_post_spawn(var/mob/living/carbon/human/H)
 	..()
-	if(H.species.get_bodytype() == !SPECIES_MONARCH_QUEEN)
-		return H.pulling_punches = TRUE
+	return H.pulling_punches = TRUE
 
 /datum/species/nabber/has_fine_manipulation(var/mob/living/carbon/human/H)
 	if(H.species.get_bodytype() == SPECIES_MONARCH_QUEEN)
@@ -438,8 +437,7 @@
 		BP_HEART =             /obj/item/organ/internal/heart/open,
 		BP_LIVER =             /obj/item/organ/internal/liver/insectoid/nabber,
 		BP_STOMACH =           /obj/item/organ/internal/stomach/insectoid,
-		BP_SYSTEM_CONTROLLER = /obj/item/organ/internal/controller,
-		BP_VOICE =    /obj/item/organ/internal/voicebox/nabber
+		BP_SYSTEM_CONTROLLER = /obj/item/organ/internal/controller
 	)
 
 	force_cultural_info = list(
@@ -492,7 +490,7 @@
 		BP_HEART =             /obj/item/organ/internal/heart/open,
 		BP_STOMACH =           /obj/item/organ/internal/stomach,
 		BP_SYSTEM_CONTROLLER = /obj/item/organ/internal/controller,
-		BP_VOICE =    /obj/item/organ/internal/voicebox/nabber
+		BP_VOICE =    /obj/item/organ/internal/voicebox/nabber/ascent
 		)
 
 	has_limbs = list(

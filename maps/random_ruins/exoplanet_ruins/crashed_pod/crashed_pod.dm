@@ -5,10 +5,10 @@ GLOBAL_LIST_INIT(crashed_pod_areas, new)
 	id = "crashed_pod"
 	description = "A crashed survival pod from a destroyed ship."
 	suffixes = list("crashed_pod/crashed_pod.dmm")
-	cost = 2
+	cost = 1.5
 	template_flags = TEMPLATE_FLAG_CLEAR_CONTENTS | TEMPLATE_FLAG_NO_RUINS | TEMPLATE_FLAG_NO_RADS
 	ruin_tags = RUIN_HUMAN|RUIN_WRECK
-	spawn_weight = 0.67
+	spawn_weight = 0.33
 
 /area/map_template/crashed_pod
 	name = "\improper Crashed Survival Pod"
@@ -25,7 +25,7 @@ GLOBAL_LIST_INIT(crashed_pod_areas, new)
 	title = "Stranded Survivor"
 	info = "Your ship has been destroyed by a terrible disaster."
 	outfit_type = /decl/hierarchy/outfit/job/survivor
-	total_positions = 2
+	total_positions = 3
 
 /decl/hierarchy/outfit/job/survivor
 	name = OUTFIT_JOB_NAME("Survivor")

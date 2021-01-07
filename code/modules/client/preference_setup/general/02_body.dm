@@ -39,6 +39,10 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 
 	var/has_cortical_stack = FALSE
 
+//////MANAOS CODE//////////
+
+	var/sprite_resize = FALSE
+
 //#######################################################################################################################
 //# VESTA.BAY # PORT NEURAL LACES #######################################################################################
 //################################################################################## VESTA.BAY ##########################
@@ -72,6 +76,7 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.rlimb_data = R.read("rlimb_data")
 	pref.body_markings = R.read("body_markings")
 	pref.body_descriptors = R.read("body_descriptors")
+	pref.sprite_resize = R.read("sprite_resize")
 	pref.preview_icon = null
 	pref.bgstate = R.read("bgstate")
 
@@ -110,6 +115,9 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	W.write("body_markings", pref.body_markings)
 	W.write("body_descriptors", pref.body_descriptors)
 	W.write("bgstate", pref.bgstate)
+//////MANAOS CODE//////////
+	W.write("sprite_resize", pref.sprite_resize)
+
 
 //#######################################################################################################################
 //# VESTA.BAY # PORT NEURAL LACES #######################################################################################
@@ -137,6 +145,9 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 	pref.g_eyes			= sanitize_integer(pref.g_eyes, 0, 255, initial(pref.g_eyes))
 	pref.b_eyes			= sanitize_integer(pref.b_eyes, 0, 255, initial(pref.b_eyes))
 	pref.b_type			= sanitize_text(pref.b_type, initial(pref.b_type))
+
+//Manaos code//
+	pref.sprite_resize = sanitize_bool(pref.sprite_resize, initial(pref.sprite_resize))
 
 //#######################################################################################################################
 //# VESTA.BAY # PORT NEURAL LACES #######################################################################################
@@ -228,6 +239,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 //#######################################################################################################################
 //# VESTA.BAY # PORT NEURAL LACES #######################################################################################
 //################################################################################## VESTA.BAY ##########################
+
+///Manaos code//
+	. += "Sprite Resize: "
+	. += pref.sprite_resize ? "<b>Yes.</b>" : "No."
+	. += " \[<a href='byond://?src=\ref[src];toggle_resize=1'>toggle</a>\]<br>"
+/////
 
 	. += "Blood Type: <a href='?src=\ref[src];blood_type=1'>[pref.b_type]</a><br>"
 
@@ -402,6 +419,12 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 //#######################################################################################################################
 //# VESTA.BAY # PORT NEURAL LACES #######################################################################################
 //################################################################################## VESTA.BAY ##########################
+
+///Manaos code///
+	else if(href_list["toggle_resize"])
+		pref.sprite_resize = !pref.sprite_resize
+		return TOPIC_REFRESH
+///
 
 	else if(href_list["blood_type"])
 		var/new_b_type = input(user, "Choose your character's blood-type:", CHARACTER_PREFERENCE_INPUT_TITLE) as null|anything in valid_bloodtypes
@@ -787,3 +810,17 @@ var/global/list/valid_bloodtypes = list("A+", "A-", "B+", "B-", "AB+", "AB-", "O
 			var/status = pref.organ_data[name]
 			if(status in list("assisted","mechanical"))
 				pref.organ_data[name] = null
+
+//////MANAOS CODE//////////
+/datum/preferences/copy_to(mob/living/carbon/human/character, is_preview_copy = FALSE)
+	..()
+	if(sprite_resize)
+		switch(character.descriptors["height"])
+			if(1)
+				character.size_multiplier = 0.75
+			if(2)
+				character.size_multiplier = 0.90
+			if(4)
+				character.size_multiplier = 1.10
+			if(5)
+				character.size_multiplier = 1.25

@@ -23,6 +23,7 @@
 	var/hide_from_reports = FALSE
 
 	var/has_distress_beacon
+	var/free_landing = FALSE
 
 /obj/effect/overmap/visitable/Initialize()
 	. = ..()
@@ -39,6 +40,9 @@
 	start_y = start_y || rand(OVERMAP_EDGE, GLOB.using_map.overmap_size - OVERMAP_EDGE)
 
 	forceMove(locate(start_x, start_y, GLOB.using_map.overmap_z))
+
+	for(var/obj/effect/overmap/event/E in loc)
+		qdel(E)
 
 	docking_codes = "[ascii2text(rand(65,90))][ascii2text(rand(65,90))][ascii2text(rand(65,90))][ascii2text(rand(65,90))]"
 

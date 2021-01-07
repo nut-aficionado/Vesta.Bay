@@ -3841,3 +3841,39 @@ obj/item/weapon/reagent_containers/food/snacks/dango
 	name = "\improper Taco!"
 	desc = "Interestingly, the shell has gone soft and the contents have gone stale."
 	icon_state = "ancient_taco"
+
+///MANAOS CODE///
+
+/obj/item/weapon/reagent_containers/food/snacks/milanesa
+	name = "milanesa"
+	desc = "Una sabrosa milanesa sobre un plato."
+	icon_state = "milanesa"
+	trash = /obj/item/trash/plate
+	filling_color = "#926238"
+	center_of_mass = "x=16;y=13"
+/obj/item/weapon/reagent_containers/food/snacks/milanesa/Initialize()
+	.=..()
+	reagents.add_reagent(/datum/reagent/nutriment = 4, /datum/reagent/nutriment/protein = 8)
+	bitesize = 5
+
+/obj/item/weapon/reagent_containers/food/snacks/milanesanapo
+	name = "milanesa napolitana"
+	desc = "Una sabrosa milanesa con su quesito y su salsita."
+	icon_state = "napolitana"
+	trash = /obj/item/trash/plate
+	filling_color = "#7a3d11"
+	center_of_mass = "x=16;y=13"
+/obj/item/weapon/reagent_containers/food/snacks/milanesanapo/Initialize()
+	.=..()
+	reagents.add_reagent(/datum/reagent/nutriment = 4, /datum/reagent/nutriment/protein = 8)
+	bitesize = 5
+
+/obj/item/weapon/reagent_containers/food/snacks/milanesacruda
+	name = "milanesa cruda"
+	desc = "Un pedaso crudo de milanesa, es mejor si la cocinas primero."
+	icon_state = "milacruda"
+	bitesize = 2
+	center_of_mass = "x=16;y=13"
+/obj/item/weapon/reagent_containers/food/snacks/milanesacruda/Initialize()
+	.=..()
+	reagents.add_reagent(/datum/reagent/nutriment = list("dough" = 3),/datum/reagent/nutriment = 3)

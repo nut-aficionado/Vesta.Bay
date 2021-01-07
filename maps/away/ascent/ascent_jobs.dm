@@ -32,8 +32,8 @@
 		if(ascent_job.set_species_on_join == SPECIES_MANTID_GYNE && !is_species_whitelisted(joining, SPECIES_MANTID_GYNE))
 			to_chat(joining, SPAN_WARNING("You are not whitelisted to play a [SPECIES_MANTID_GYNE]."))
 			return FALSE
-		if(ascent_job.set_species_on_join == SPECIES_MONARCH_QUEEN && !is_species_whitelisted(joining, SPECIES_NABBER))
-			to_chat(joining, SPAN_WARNING("You must be whitelisted to play a [SPECIES_NABBER] to join as a [SPECIES_MONARCH_QUEEN]."))
+		if(ascent_job.set_species_on_join == SPECIES_MONARCH_QUEEN && !is_species_whitelisted(joining, SPECIES_MANTID_GYNE))
+			to_chat(joining, SPAN_WARNING("You must be whitelisted to play a [SPECIES_MANTID_GYNE] to join as a [SPECIES_MONARCH_QUEEN]."))
 			return FALSE
 
 /mob/living/carbon/human/proc/gyne_rename_lineage()
@@ -85,15 +85,21 @@
 		var/datum/job/submap/ascent/ascent_job = mind.assigned_job
 		var/datum/submap/ascent/cutter = ascent_job.owner
 		if(istype(cutter))
-			var/new_name = sanitize(input("What is your name", "Choose name") as text|null, MAX_NAME_LEN)
-			if(!new_name)
-				return
-
 			if(!mind || mind.assigned_job != ascent_job)
 				return
 
 			// Rename ourselves.
-			fully_replace_character_name("[new_name]")
+			if(species.name == SPECIES_MONARCH_QUEEN)
+				var/new_name = sanitize(input("What is your name? Queen...", "Choose name") as text|null, MAX_NAME_LEN)
+				if(!new_name)
+					return
+				fully_replace_character_name("["Queen"] [new_name]")
+
+			else
+				var/new_name = sanitize(input("What is your name?", "Choose name") as text|null, MAX_NAME_LEN)
+				if(!new_name)
+					return
+				fully_replace_character_name("[new_name]")
 
 	verbs -= /mob/living/carbon/human/proc/serpentid_namepick
 
@@ -163,10 +169,10 @@
 			var/new_alate_number = is_species_whitelisted(H, SPECIES_MANTID_GYNE) ? random_id(/datum/species/mantid, 1000, 9999) : random_id(/datum/species/mantid, 10000, 99999)
 			H.real_name = "[new_alate_number] [cutter.gyne_name]"
 		if(SPECIES_MONARCH_WORKER)
-			H.real_name = "["monarch worker of "][cutter.gyne_name]"
+			H.real_name = "[create_worker_name()]"
 			H.verbs |= /mob/living/carbon/human/proc/serpentid_namepick
 		if(SPECIES_MONARCH_QUEEN)
-			H.real_name = "["monarch queen of "][cutter.gyne_name]"
+			H.real_name = "["Queen "][create_queen_name()]"
 			H.verbs |= /mob/living/carbon/human/proc/serpentid_namepick
 	H.name = H.real_name
 	if(H.mind)
@@ -253,6 +259,6 @@
 
 /mob/living/silicon/ai/ascent
 	name = "TODO"
-
 */
+
 #undef WEBHOOK_SUBMAP_LOADED_ASCENT

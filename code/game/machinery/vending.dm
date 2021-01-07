@@ -576,6 +576,7 @@
 
 */
 
+/* We using Vesta's.
 /obj/machinery/vending/boozeomat
 	name = "\improper Booze-O-Mat"
 	desc = "A refrigerated vending unit for alcoholic beverages and alcoholic beverage accessories."
@@ -652,6 +653,7 @@
 	product_ads = "Drink up!;Booze is good for you!;Alcohol is humanity's best friend.;Quite delighted to serve you!;Care for a nice, cold beer?;Nothing cures you like booze!;Have a sip!;Have a drink!;Have a beer!;Beer is good for you!;Only the finest alcohol!;Best quality booze since 2053!;Award-winning wine!;Maximum alcohol!;Man loves beer.;A toast for progress!"
 	req_access = list(access_bar)
 	base_type = /obj/machinery/vending/boozeomat
+*/
 
 /obj/machinery/vending/assist
 	products = list(	/obj/item/device/assembly/prox_sensor = 5,/obj/item/device/assembly/igniter = 3,/obj/item/device/assembly/signaler = 4,
@@ -785,8 +787,8 @@
 	icon_deny = "fitness-deny"
 	vend_delay = 6
 	base_type = /obj/machinery/vending/fitness
-	products = list(/obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton = 8,
-					/obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton/chocolate = 8,
+	products = list(/obj/item/weapon/reagent_containers/food/drinks/smallcarton/milk = 8,
+					/obj/item/weapon/reagent_containers/food/drinks/smallcarton/chocolate = 8,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle = 8,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake = 8,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask = 8,
@@ -794,8 +796,8 @@
 					/obj/item/weapon/reagent_containers/pill/diet = 8,
 					/obj/item/weapon/towel/random = 8)
 
-	prices = list(/obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton = 3,
-					/obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton/chocolate = 3,
+	prices = list(/obj/item/weapon/reagent_containers/food/drinks/smallcarton/milk = 3,
+					/obj/item/weapon/reagent_containers/food/drinks/smallcarton/chocolate = 3,
 					/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle = 2,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask/proteinshake = 20,
 					/obj/item/weapon/reagent_containers/food/drinks/glass2/fitnessflask = 5,
@@ -1181,7 +1183,7 @@
 	vend_delay = 21
 	base_type = /obj/machinery/vending/engivend
 	req_access = list(list(access_atmospherics,access_engine_equip))
-	products = list(/obj/item/clothing/glasses/meson = 2,/obj/item/device/multitool = 4,/obj/item/device/geiger = 4,/obj/item/weapon/airlock_electronics = 10,/obj/item/weapon/module/power_control = 10,/obj/item/weapon/airalarm_electronics = 10,/obj/item/weapon/cell/standard = 10,/obj/item/clamp = 10)
+	products = list(/obj/item/clothing/glasses/meson = 2,/obj/item/device/multitool = 4,/obj/item/weapon/screwdriver/power = 3,/obj/item/device/geiger = 4,/obj/item/weapon/airlock_electronics = 10,/obj/item/weapon/module/power_control = 10,/obj/item/weapon/airalarm_electronics = 10,/obj/item/weapon/cell/standard = 10,/obj/item/clamp = 10)
 	contraband = list(/obj/item/weapon/cell/high = 3)
 	premium = list(/obj/item/weapon/storage/belt/utility = 3)
 
@@ -1455,3 +1457,75 @@
 	product_slogans = ";STARFIGHTER TESTED!, STARFIGHTER RECOMMENDED!, STARFIGHTER APPROVED!;YOU ARE NOT ALLOWED A JELLY DOUGHNUT!;YOU DONT WANT TO DIE HUNGRY SOLDIER!"
 	product_ads = "Everything the body needs!;Now transfat free;Vegan options are available.;Rated for all known species!"
 	base_type = /obj/machinery/vending/mredispenser
+
+///MANAOS CODE///
+/obj/machinery/vending/figurevendor
+	name = "Vendedor de figuras de accion \"Manaos\""
+	desc = "Una maquina que vende figuras de accion de edicion limitada."
+	vend_delay = 30
+	base_type = /obj/machinery/vending/figurevendor
+	product_slogans = "Adorable!"
+	icon_state = "MagiVend"
+	icon_deny = "MagiVend-deny"
+	icon_vend = "MagiVend-vend"
+	products = list(/obj/item/toy/figure/aleph,
+					/obj/item/toy/figure/alicia,
+					/obj/item/toy/figure/alysson,
+					/obj/item/toy/figure/ana,
+					/obj/item/toy/figure/angelina,
+					/obj/item/toy/figure/azazel,
+					/obj/item/toy/figure/area,
+					/obj/item/toy/figure/ariel,
+					/obj/item/toy/figure/arkin,
+					/obj/item/toy/figure/bruno,
+					/obj/item/toy/figure/camilo,
+					/obj/item/toy/figure/connor,
+					/obj/item/toy/figure/dana,
+					/obj/item/toy/figure/darkness,
+					/obj/item/toy/figure/duck,
+					/obj/item/toy/figure/franco,
+					/obj/item/toy/figure/gabriel,
+					/obj/item/toy/figure/hal,
+					/obj/item/toy/figure/honkito,
+					/obj/item/toy/figure/iryna,
+					/obj/item/toy/figure/jr,
+					/obj/item/toy/figure/kans,
+					/obj/item/toy/figure/lazy,
+					/obj/item/toy/figure/louie,
+					/obj/item/toy/figure/manuel,
+					/obj/item/toy/figure/priscilla,
+					/obj/item/toy/figure/sam,
+					/obj/item/toy/figure/slimy,
+					/obj/item/toy/figure/smug,
+					/obj/item/toy/figure/suki,
+					/obj/item/toy/figure/sydney1,
+					/obj/item/toy/figure/sydney2,
+					/obj/item/toy/figure/uzume,
+					/obj/item/toy/figure/vaum,
+					/obj/item/toy/figure/wh,
+					/obj/item/toy/figure/zsle)
+
+	contraband = list(/obj/item/toy/figure/vlad)
+
+	obj/machinery/vending/cola/manaos
+	name = "Manaos"
+	desc = "Una maquina de bebidas unicamente de Manaos, marca \"Manaos\"."
+	icon_state = "Manaos_Machine"
+	icon_vend = "Manaos_Machine-vend"
+	icon_deny = "Manaos_Machine-deny"
+	vend_delay = 11
+	base_type = /obj/machinery/vending/cola
+	products = list(/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_cola = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_manzana = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limalimon = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_naranja = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_uva = 5,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limon = 5)
+	prices = list(/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_cola = 2,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_manzana = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limalimon = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_naranja = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_uva = 4,
+					/obj/item/weapon/reagent_containers/food/drinks/cans/manaos_limon = 4)
+
+	idle_power_usage = 211

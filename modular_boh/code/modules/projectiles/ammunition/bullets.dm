@@ -29,12 +29,33 @@
 	projectile_type = /obj/item/projectile/bullet/sabot
 	matter = list(MATERIAL_STEEL = 420)
 
+/obj/item/ammo_magazine/skrell_shotgun
+	name = "skrellian flechette magazine"
+	desc = "A magazine with pointy, alien flechettes inside"
+	icon = 'modular_boh/icon/obj/ammo.dmi'
+	icon_state = "skrellflechettemag"
+	mag_type = MAGAZINE
+	caliber = CALIBER_SKRELL_SHOTGUN
+	ammo_type = /obj/item/ammo_casing/skrell_shotgun
+	matter = list(MATERIAL_STEEL = 1240)
+	max_ammo = 8
+	multiple_sprites = 1
+
+/obj/item/ammo_casing/skrell_shotgun
+	name = "skrellian flechette"
+	desc = "A pointy flechette of alien design"
+	icon = 'modular_boh/icon/obj/ammo.dmi'
+	icon_state = "skrellflechette"
+	spent_icon = "skrellflechette-spent"
+	caliber = CALIBER_SKRELL_SHOTGUN
+	projectile_type = /obj/item/projectile/bullet/magnetic/skrell_flechette
+
 /obj/item/ammo_magazine/speedloader/large
 	name = "heavy speed loader"
 	icon_state = "spdloader_magnum"
 	caliber = CALIBER_PISTOL_MAGNUM_LARGE
 	ammo_type = /obj/item/ammo_casing/pistol/magnum/large
-	matter = list(MATERIAL_STEEL = 50000) //Same as the RCD, retardedly high, for good reason.
+	matter = list(MATERIAL_STEEL = 4320) //Reduced this experimentally to 3x the regular cost of a magnum speedloader
 	max_ammo = 6
 	multiple_sprites = 1
 

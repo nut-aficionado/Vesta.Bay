@@ -10,13 +10,14 @@
 	var/newscast = 0
 	var/channel_name = "Announcements"
 	var/announcement_type = "Announcement"
+	var/admin_announcement = 0
 
 /datum/announcement/priority
-	title = "Priority Announcement"
+	title = "Anuncio Prioritario"
 	announcement_type = "Priority Announcement"
 
 /datum/announcement/priority/security
-	title = "Security Announcement"
+	title = "Anuncio de Seguridad"
 	announcement_type = "Security Announcement"
 
 /datum/announcement/New(var/do_log = 0, var/new_sound = null, var/do_newscast = 0)
@@ -29,7 +30,7 @@
 	title = "[command_name()] Update"
 	announcement_type = "[command_name()] Update"
 
-/datum/announcement/proc/Announce(var/message as text, var/new_title = "", var/new_sound = null, var/do_newscast = newscast, var/msg_sanitized = 0, var/zlevels = GLOB.using_map.contact_levels)
+/datum/announcement/proc/Announce(var/message as text, var/new_title = "", var/new_sound = null, var/do_newscast = newscast, var/msg_sanitized = 0, var/from, var/msg_language, var/zlevels = GLOB.using_map.contact_levels)
 	if(!message)
 		return
 	var/message_title = new_title ? new_title : title
@@ -39,15 +40,19 @@
 		message = sanitize(message, extra = 0)
 	message_title = sanitizeSafe(message_title)
 
-	var/msg = FormMessage(message, message_title)
+	var/message_announcer = null
+	if(announcer)
+		message_announcer = html_encode(announcer)
+
+	var/msg = FormMessage(message, message_title, message_announcer, from)
 	for(var/mob/M in GLOB.player_list)
 		if((M.z in (zlevels | GLOB.using_map.admin_levels)) && !istype(M,/mob/new_player) && !isdeaf(M))
 			to_chat(M, msg)
-			if(message_sound)
+			if(message_sound && M.client.get_preference_value(/datum/client_preference/play_announcement_sfx) == GLOB.PREF_YES)
 				sound_to(M, message_sound)
 
 	if(do_newscast)
-		NewsCast(message, message_title)
+		NewsCast(message, message_title, zlevels)
 
 	if(log)
 		log_say("[key_name(usr)] has made \a [announcement_type]: [message_title] - [message] - [announcer]")
@@ -69,8 +74,8 @@ datum/announcement/priority/FormMessage(message as text, message_title as text)
 		. += "<br><span class='alert'> -[html_encode(announcer)]</span>"
 	. += "<br>"
 
-datum/announcement/priority/command/FormMessage(message as text, message_title as text)
-	. = "<h1 class='alert'>[command_name()] Update</h1>"
+datum/announcement/priority/command/FormMessage(message as text, message_title as text, message_announcer, from)
+	. = "<h1 class='alert'>[from]</h1>"
 	if (message_title)
 		. += "<br><h2 class='alert'>[message_title]</h2>"
 
@@ -81,7 +86,7 @@ datum/announcement/priority/security/FormMessage(message as text, message_title 
 	. = "<font size=4 color='red'>[message_title]</font>"
 	. += "<br><font color='red'>[message]</font>"
 
-datum/announcement/proc/NewsCast(message as text, message_title as text)
+datum/announcement/proc/NewsCast(message as text, message_title as text, zlevels)
 	if(!newscast)
 		return
 
@@ -91,7 +96,7 @@ datum/announcement/proc/NewsCast(message as text, message_title as text)
 	news.message = message
 	news.message_type = announcement_type
 	news.can_be_redacted = 0
-	announce_newscaster_news(news)
+	announce_newscaster_news(news, zlevels)
 
 /proc/GetNameAndAssignmentFromId(var/obj/item/weapon/card/id/I)
 	// Format currently matches that of newscaster feeds: Registered Name (Assigned Rank)

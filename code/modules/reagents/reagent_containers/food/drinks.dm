@@ -156,20 +156,23 @@
 	. = ..()
 	reagents.add_reagent(/datum/reagent/drink/milk/soymilk, 50)
 
-/obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton
-	name = "small milk carton"
+/obj/item/weapon/reagent_containers/food/drinks/smallcarton
+	name = "small carton"
 	volume = 30
 	icon_state = "mini-milk"
 
-/obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton/Initialize()
+/obj/item/weapon/reagent_containers/food/drinks/smallcarton/milk
+	name = "small milk carton"
+
+/obj/item/weapon/reagent_containers/food/drinks/smallcarton/milk/Initialize()
 	. = ..()
 	reagents.add_reagent(/datum/reagent/drink/milk, 30)
 
-/obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton/chocolate
+/obj/item/weapon/reagent_containers/food/drinks/smallcarton/chocolate
 	name = "small chocolate milk carton"
 	desc = "It's milk! This one is in delicious chocolate flavour."
 
-/obj/item/weapon/reagent_containers/food/drinks/milk/smallcarton/chocolate/Initialize()
+/obj/item/weapon/reagent_containers/food/drinks/smallcarton/chocolate/Initialize()
 	. = ..()
 	reagents.add_reagent(/datum/reagent/drink/milk/chocolate, 30)
 
@@ -328,3 +331,17 @@
 /obj/item/weapon/reagent_containers/food/drinks/tea/chai/Initialize()
 	. = ..()
 	reagents.add_reagent(/datum/reagent/drink/tea/chai, 30)
+
+
+///Code Manaos///
+/obj/item/weapon/reagent_containers/food/drinks/mate
+	name = "porongo"
+	desc = "Un recipiente unicamente para tomar mate. Una bombilla sale de esta."
+	icon = 'icons/obj/drink_glasses/coffecup.dmi'
+	icon_state = "mate"
+	item_state = "mate"
+	possible_transfer_amounts = null
+	volume = 15
+	center_of_mass = "x=16;y=12"
+/obj/item/weapon/reagent_containers/food/drinks/mate/feed_sound(var/mob/user)
+	playsound(user.loc, 'sound/items/mate.ogg', rand(10, 50), 1)

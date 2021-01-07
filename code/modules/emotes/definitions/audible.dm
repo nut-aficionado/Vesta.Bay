@@ -156,6 +156,30 @@
 	check_restraints = TRUE
 	check_range = 1
 
+/decl/emote/audible/fsnap
+	key = "fsnap"
+	emote_message_1p_target = "<span class='notice'>You snap your fingers at TARGET, trying to get TARGET_THEIR attention.</span>"
+	emote_message_1p = "You snap your fingers."
+	emote_message_3p_target = "<span class='notice'>USER snaps USER_THEIR fingers at TARGET, trying to get TARGET_THEIR attention.</span>"
+	emote_message_3p = "USER snaps USER_THEIR fingers."
+	emote_sound = 'sound/misc/fsnap1.ogg'
+
+/decl/emote/audible/fsnap2
+	key = "fsnap2"
+	emote_message_1p_target = "<span class='notice'>You snap your fingers at TARGET twice, trying to get TARGET_THEIR attention.</span>"
+	emote_message_1p = "You snap your fingers twice."
+	emote_message_3p_target = "<span class='notice'>USER snaps USER_THEIR fingers at TARGET twice, trying to get TARGET_THEIR attention.</span>"
+	emote_message_3p = "USER snaps USER_THEIR fingers twice."
+	emote_sound = 'sound/misc/fsnap2.ogg'
+
+/decl/emote/audible/fsnap3
+	key = "fsnap3"
+	emote_message_1p_target = "<span class='notice'>You snap your fingers at TARGET three times in a row, trying to get TARGET_THEIR attention.</span>"
+	emote_message_1p = "You snap your fingers three times in a row."
+	emote_message_3p_target = "<span class='notice'>USER snaps USER_THEIR fingers at TARGET three times in a row, trying to get TARGET_THEIR attention.</span>"
+	emote_message_3p = "USER snaps USER_THEIR fingers three times in a row."
+	emote_sound = 'sound/misc/fsnap3.ogg'
+
 /decl/emote/audible/bug_hiss
 	key ="hiss"
 	emote_message_3p_target = "USER hisses at TARGET."
@@ -213,3 +237,50 @@
 	key ="warble"
 	emote_message_3p = "USER warbles."
 	emote_sound = 'sound/voice/warble.ogg'
+
+/decl/emote/audible/aslap
+	key = "aslap"
+	emote_message_1p = "Te nalgeas a ti mismo!"
+	emote_message_3p= "USER nalgea a TARGET!"
+	emote_sound = 'sound/effects/snap.ogg'
+
+/decl/emote/audible/nya
+	key = "nya"
+	emote_message_3p= "USER deja salir el Nya~"
+/decl/emote/audible/nya/do_extra(var/atom/user)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc, 'sound/effects/nya.ogg', 25, 1)
+
+/decl/emote/audible/awoo
+	key = "awoo"
+	emote_message_3p= "USER deja salir el Awoo~"
+/decl/emote/audible/awoo/do_extra(var/atom/user)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc, 'sound/voice/awoo.ogg', 25, 1)
+
+/decl/emote/audible/bark
+	key = "bark"
+	emote_message_3p= "USER ladra!"
+/decl/emote/audible/bark/do_extra(var/atom/user)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc,pick( 'sound/creatures/pug_bark1.ogg', 15, 1))
+		if(C.gender == MALE)
+			playsound(C.loc,pick( 'sound/creatures/dog_bark1.ogg', 15, 1))
+
+/decl/emote/audible/bark2
+	key = "bark2"
+	emote_message_3p= "USER ladra!"
+
+/decl/emote/audible/bark2/do_extra(var/atom/user)
+	if(iscarbon(user))
+		var/mob/living/carbon/C = user
+		if(C.gender == FEMALE)
+			playsound(C.loc,pick( 'sound/creatures/pug_bark2.ogg', 15, 1))
+		if(C.gender == MALE)
+			playsound(C.loc,pick( 'sound/creatures/dog_bark2.ogg', 15, 1))

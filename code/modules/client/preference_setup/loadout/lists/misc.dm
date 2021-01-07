@@ -111,6 +111,8 @@
 	plushes["lizard plush"] = /obj/item/toy/plushie/lizard
 	plushes["spider plush"] = /obj/item/toy/plushie/spider
 	plushes["farwa plush"] = /obj/item/toy/plushie/farwa
+	plushes["slime plush"] = /obj/item/toy/plushie/slime
+	plushes["kobold plush"] = /obj/item/toy/plushie/kobold
 	gear_tweaks += new /datum/gear_tweak/path(plushes)
 
 /datum/gear/workvisa

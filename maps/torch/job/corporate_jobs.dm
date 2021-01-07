@@ -21,8 +21,13 @@
 	min_skill = list(   SKILL_BUREAUCRACY	= SKILL_EXPERT,
 	                    SKILL_FINANCE		= SKILL_BASIC)
 	skill_points = 20
-	access = list(access_liaison, access_bridge, access_solgov_crew,
-						access_nanotrasen, access_commissary, access_torch_fax)
+
+	access = list(
+		access_liaison, access_bridge, access_solgov_crew,
+		access_nanotrasen, access_commissary, access_torch_fax,
+		access_radio_comm, access_radio_serv
+	)
+
 	software_on_spawn = list(/datum/computer_file/program/reports)
 
 /datum/job/liaison/get_description_blurb()
@@ -55,8 +60,8 @@
 	                    SKILL_COMBAT      = SKILL_BASIC,
 	                    SKILL_WEAPONS     = SKILL_BASIC,
 	                    SKILL_FORENSICS   = SKILL_BASIC)
-	max_skill = list(   SKILL_COMBAT      = SKILL_EXPERT,
-	                    SKILL_WEAPONS     = SKILL_EXPERT,
+	max_skill = list(   SKILL_COMBAT      = SKILL_PROF,
+	                    SKILL_WEAPONS     = SKILL_PROF,
 	                    SKILL_FORENSICS   = SKILL_EXPERT)
 	alt_titles = list(
 		"Union Enforcer",
@@ -64,9 +69,13 @@
 		"Asset Protection Agent"
 	)
 	skill_points = 20
-	access = list(access_liaison, access_bridge, access_solgov_crew,
-						access_nanotrasen, access_commissary,
-						access_sec_guard, access_torch_fax)
+
+	access = list(
+		access_liaison, access_bridge, access_solgov_crew,
+		access_nanotrasen, access_commissary,
+		access_sec_guard, access_torch_fax, access_radio_serv
+	)
+
 	defer_roundstart_spawn = TRUE
 
 /datum/job/bodyguard/is_position_available()

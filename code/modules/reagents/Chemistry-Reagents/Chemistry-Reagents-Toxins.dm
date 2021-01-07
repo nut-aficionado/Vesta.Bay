@@ -493,6 +493,7 @@
 	metabolism = REM * 0.5
 	overdose = REAGENTS_OVERDOSE * 0.5
 	value = 2.6
+	should_admin_log = TRUE
 
 /datum/reagent/vecuronium_bromide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -927,3 +928,12 @@
 	heating_products = list(/datum/reagent/acetone, /datum/reagent/carbon, /datum/reagent/ethanol)
 	heating_point = 145 CELSIUS
 	heating_message = "separates."
+
+/datum/reagent/toxin/boron
+	name = "Boron"
+	description = "A chemical that is highly valued in fusion energy."
+	taste_description = "metal"
+	reagent_state = SOLID
+	color = "#837e79"
+	value = 4
+	strength = 7

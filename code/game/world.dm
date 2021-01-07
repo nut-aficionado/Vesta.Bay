@@ -573,9 +573,9 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"https://forums.baystation12.net/\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"https://discord.gg/Cp8httq\">" //Change this to wherever you want the hub to link to.
 //	s += "[game_version]"
-	s += "Forums"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
 	s += "</a>"
 	s += ")"
 
@@ -584,15 +584,15 @@ var/world_topic_spam_protect_time = world.timeofday
 	if(SSticker.master_mode)
 		features += SSticker.master_mode
 	else
-		features += "<b>STARTING</b>"
+		features += "<b>Comenzando</b>"
 
 	if (!config.enter_allowed)
-		features += "closed"
+		features += "cerrado"
 
 	features += config.abandon_allowed ? "respawn" : "no respawn"
 
 	if (config && config.allow_vote_mode)
-		features += "vote"
+		features += "votos"
 
 	var/n = 0
 	for (var/mob/M in GLOB.player_list)
@@ -600,13 +600,13 @@ var/world_topic_spam_protect_time = world.timeofday
 			n++
 
 	if (n > 1)
-		features += "~[n] players"
+		features += "~[n] jugadores"
 	else if (n > 0)
-		features += "~[n] player"
+		features += "~[n] jugador"
 
 
 	if (config && config.hostedby)
-		features += "hosted by <b>[config.hostedby]</b>"
+		features += "<b>Whitelist Activa</b>"
 
 	if (features)
 		s += ": [jointext(features, ", ")]"

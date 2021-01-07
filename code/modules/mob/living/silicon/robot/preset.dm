@@ -43,6 +43,7 @@
 	req_access = list(access_ascent)
 	silicon_radio = null
 	machine_restriction = FALSE
+	faction = "kharmaani"
 	var/global/ascent_drone_count = 0
 
 /mob/living/silicon/robot/flying/ascent/add_ion_law(law)
@@ -50,6 +51,8 @@
 
 /mob/living/silicon/robot/flying/ascent/Initialize()
 	. = ..()
+	remove_language(LANGUAGE_HUMAN_EURO)
+	remove_language(LANGUAGE_EAL)
 	remove_language(LANGUAGE_ROBOT_GLOBAL)
 	default_language = all_languages[LANGUAGE_MANTID_NONVOCAL]
 
