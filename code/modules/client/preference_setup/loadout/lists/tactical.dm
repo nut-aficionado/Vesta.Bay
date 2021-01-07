@@ -36,3 +36,8 @@
 	display_name = "tacticool turtleneck"
 	path = /obj/item/clothing/under/syndicate/tacticool
 	slot = slot_w_uniform
+
+/datum/gear/tactical/civ_vest
+	display_name = "low-profile armor vest"
+	path = /obj/item/clothing/accessory/armorplate/sneaky
+	cost = 2
