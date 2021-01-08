@@ -11,3 +11,10 @@
 	desc = "Stylish goggles"
 	icon_state = "aesth_ama"
 	item_state = "aesth_ama_i"
+
+/obj/item/clothing/glasses/sunglasses/manaos/cool
+	name = "pinky sunglasses"
+	desc = "Oh damn boy, u want these sunglasses!"
+	icon_state = "sungl_ama"
+	item_state = "sungl_ama"
+	flash_protection = FLASH_PROTECTION_MODERATE
