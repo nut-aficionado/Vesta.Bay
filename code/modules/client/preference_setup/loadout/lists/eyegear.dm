@@ -112,7 +112,7 @@
 	display_name = "Sunglasses"
 	path = /obj/item/clothing/glasses/sunglasses
 	cost = 3
-
+/*
 /datum/gear/eyes/shades/sunglasses/pinky
 	display_name = "sunglasses, pinky"
 	path = /obj/item/clothing/glasses/sunglasses/manaos/cool
@@ -121,7 +121,7 @@
 /datum/gear/eyes/shades/sunglasses
 	display_name = "sunglasses, fat"
 	path = /obj/item/clothing/glasses/sunglasses/big
-
+*/
 /datum/gear/eyes/sunglasses/New()
 	..()
 	var/sunglasses = list()
