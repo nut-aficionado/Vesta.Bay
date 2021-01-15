@@ -31,7 +31,7 @@
 	fashglasses["Hipster glasses"] = /obj/item/clothing/glasses/prescription/hipster
 	fashglasses["Monocle"] = /obj/item/clothing/glasses/monocle
 	fashglasses["Scanning goggles"] = /obj/item/clothing/glasses/prescription/scanners
-	flashglasses["aesthetic goggles"] = /obj/item/clothing/glasses/sunglasses/manaos/aesthetic
+	fashglasses["aesthetic goggles"] = /obj/item/clothing/glasses/sunglasses/manaos/aesthetic
 	gear_tweaks += new/datum/gear_tweak/path(fashglasses)
 
 /datum/gear/eyes/sciencegoggles
