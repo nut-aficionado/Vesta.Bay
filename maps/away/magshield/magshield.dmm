@@ -916,6 +916,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
+/mob/living/simple_animal/hostile/syndicate/melee/space,
 /turf/simulated/floor/airless,
 /area/magshield/smes_storage)
 "cr" = (
@@ -4359,8 +4360,53 @@
 /obj/effect/shuttle_landmark/nav_magshield/nav3,
 /turf/space,
 /area/space)
+"nc" = (
+/mob/living/simple_animal/hostile/syndicate/melee/space,
+/turf/simulated/floor/tiled,
+/area/magshield/south)
+"nl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0
+	},
+/mob/living/simple_animal/hostile/syndicate/melee/space,
+/turf/simulated/floor/airless,
+/area/magshield/north)
+"nQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8";
+	pixel_y = 0
+	},
+/mob/living/simple_animal/hostile/syndicate/melee/space,
+/turf/simulated/floor/airless,
+/area/magshield/north)
 "uL" = (
 /obj/effect/wallframe_spawn/reinforced,
+/turf/simulated/floor/tiled,
+/area/magshield/west)
+"vO" = (
+/mob/living/simple_animal/hostile/syndicate/ranged/space,
+/turf/simulated/floor/tiled/dark,
+/area/magshield/west)
+"xE" = (
+/mob/living/simple_animal/hostile/syndicate/ranged/space,
+/turf/simulated/floor/airless,
+/area/magshield/north)
+"Ch" = (
+/mob/living/simple_animal/hostile/syndicate/melee/space,
 /turf/simulated/floor/tiled,
 /area/magshield/west)
 "Eo" = (
@@ -4372,6 +4418,12 @@
 	},
 /turf/simulated/floor/airless,
 /area/magshield/east)
+"JV" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/mob/living/simple_animal/hostile/syndicate/melee/space,
+/turf/simulated/floor/tiled,
+/area/magshield/south)
 
 (1,1,1) = {"
 aa
@@ -18009,7 +18061,7 @@ gI
 gP
 gW
 fA
-fA
+Ch
 fA
 hK
 hT
@@ -19622,7 +19674,7 @@ fA
 fA
 fA
 fA
-fB
+vO
 fA
 fA
 fA
@@ -19842,7 +19894,7 @@ iO
 jc
 jc
 jK
-kg
+JV
 kw
 kP
 jd
@@ -22638,7 +22690,7 @@ dp
 dj
 dU
 dj
-ej
+nl
 dm
 eR
 de
@@ -24692,7 +24744,7 @@ ju
 jw
 kk
 kE
-jd
+nc
 jw
 jw
 ip
@@ -25668,7 +25720,7 @@ dv
 dj
 dj
 dj
-eo
+nQ
 dj
 eU
 de
@@ -28091,7 +28143,7 @@ de
 dB
 dj
 dj
-dj
+xE
 dj
 eo
 dt
