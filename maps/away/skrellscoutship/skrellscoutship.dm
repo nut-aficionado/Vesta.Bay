@@ -256,6 +256,7 @@
 		/obj/item/weapon/magnetic_ammo,
 		/obj/item/device/binoculars,
 		/obj/item/clothing/gloves,
+		/obj/item/weapon/shield/energy/skrell,
 	)
 	can_holster = list(/obj/item/weapon/gun/energy/gun/skrell
 		)
@@ -273,6 +274,7 @@
 	color = COLOR_LIGHT_CYAN
 	b_colour = COLOR_LIGHT_CYAN
 	desc = "Some kind of strange alien lightbulb technology."
+	random_tone = FALSE
 
 /obj/item/weapon/light/tube/large/skrell
 	name = "skrellian light filament"
