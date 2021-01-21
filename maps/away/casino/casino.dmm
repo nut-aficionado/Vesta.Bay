@@ -467,10 +467,6 @@
 "br" = (
 /turf/simulated/wall/r_wall,
 /area/casino/casino_hangar)
-"bs" = (
-/turf/space,
-/turf/simulated/wall/r_wall,
-/area/casino/casino_hangar)
 "bt" = (
 /obj/effect/shuttle_landmark/nav_casino/nav3,
 /turf/space,
@@ -2118,7 +2114,7 @@
 	id_tag = "casino_main"
 	},
 /obj/machinery/door/firedoor,
-/turf/space,
+/turf/simulated/floor/plating,
 /area/casino/casino_mainfloor)
 "fB" = (
 /obj/machinery/light/small{
@@ -4931,10 +4927,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/casino/casino_bow)
-"mT" = (
-/turf/space,
-/turf/simulated/wall/r_wall,
-/area/casino/casino_bow)
 "mU" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 4
@@ -4972,7 +4964,7 @@
 	icon_state = "pdoor0";
 	id_tag = "Starboard wide window BD"
 	},
-/turf/space,
+/turf/simulated/floor/plating,
 /area/casino/casino_bow)
 "na" = (
 /obj/machinery/door/airlock/external{
@@ -9789,7 +9781,7 @@ lz
 kC
 kC
 kC
-mT
+kC
 aa
 aa
 aa
@@ -9892,7 +9884,7 @@ kC
 mk
 mG
 kC
-mT
+kC
 aa
 aa
 aa
@@ -13014,7 +13006,7 @@ aa
 aa
 aa
 aa
-bs
+br
 br
 cn
 cF
@@ -13055,7 +13047,7 @@ mE
 kC
 mH
 kC
-mT
+kC
 aa
 aa
 aa
@@ -13117,7 +13109,7 @@ aa
 aa
 aa
 aa
-bs
+br
 br
 cF
 cF
@@ -13156,7 +13148,7 @@ mj
 kl
 kC
 kC
-mT
+kC
 aa
 aa
 aa
@@ -13220,7 +13212,7 @@ aa
 aa
 aa
 aa
-bs
+br
 br
 cX
 cX
@@ -13257,7 +13249,7 @@ fA
 fA
 fA
 kC
-mT
+kC
 aa
 aa
 aa
