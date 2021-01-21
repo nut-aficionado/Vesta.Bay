@@ -88,6 +88,7 @@
 "an" = (
 /obj/effect/decal/cleanable/blood,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/carp,
 /turf/simulated/floor/tiled/monotile,
 /area/map_template/oldpod)
 "ao" = (
@@ -135,6 +136,7 @@
 /obj/effect/decal/cleanable/filth,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/carp/holodeck,
 /turf/simulated/floor/tiled/monotile,
 /area/map_template/oldpod)
 "at" = (
@@ -188,6 +190,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/carp,
 /turf/simulated/floor/tiled/monotile,
 /area/map_template/oldpod)
 "aA" = (
@@ -430,6 +433,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/carp/pike,
 /turf/simulated/floor/tiled/white/monotile,
 /area/map_template/oldpod)
 "aZ" = (
@@ -517,6 +521,12 @@
 	dir = 6
 	},
 /area/map_template/oldpod)
+"VM" = (
+/obj/effect/decal/cleanable/filth,
+/obj/effect/decal/cleanable/dirt,
+/mob/living/simple_animal/hostile/carp/holodeck,
+/turf/simulated/floor/tiled/monotile,
+/area/map_template/oldpod)
 
 (1,1,1) = {"
 aa
@@ -580,7 +590,7 @@ ad
 "}
 (6,1,1) = {"
 ae
-ai
+VM
 an
 av
 aC
