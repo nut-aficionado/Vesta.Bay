@@ -75,14 +75,12 @@ var/const/INF               =(1<<11)
 	selection_color = "#557e38"
 	economic_power = 4
 	minimal_player_age = 8
-	skill_points = 24
+	skill_points = 28
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/infantry/combat_tech
 	minimum_character_age = list(SPECIES_HUMAN = 20)
-	min_skill = list(	SKILL_CONSTRUCTION = SKILL_ADEPT,
-						SKILL_ELECTRICAL   = SKILL_ADEPT,
-						SKILL_MEDICAL      = SKILL_BASIC,
-						SKILL_COMBAT       = SKILL_ADEPT,
-						SKILL_WEAPONS      = SKILL_ADEPT)
+	min_skill = list(	SKILL_COMBAT       = SKILL_ADEPT,
+						SKILL_WEAPONS      = SKILL_ADEPT,
+						SKILL_EVA          = SKILL_BASIC)
 
 	max_skill = list(	SKILL_COMBAT       = SKILL_EXPERT,
 						SKILL_WEAPONS      = SKILL_PROF,
@@ -100,7 +98,7 @@ var/const/INF               =(1<<11)
 		/datum/mil_rank/marine_corps/e4,
 		/datum/mil_rank/marine_corps/e5
 		)
-	access = list(access_maint_tunnels, access_solgov_crew, access_petrov, access_petrov_security,
+	access = list(access_medical, access_medical_equip, access_engine, access_engine_equip, access_maint_tunnels, access_solgov_crew, access_petrov, access_petrov_security,
 			            access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar, access_guppy_helm, access_infantry,
 			            access_inftech, access_aquila, access_eva)
 
