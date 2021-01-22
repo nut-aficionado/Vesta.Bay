@@ -106,6 +106,16 @@ modular computers
 	display_name = "crayon de mimo"
 	path = /obj/item/weapon/pen/crayon/mime
 
+/datum/gear/utility/stream
+	display_name = "camara de directos"
+	path = /obj/item/device/camera/tvcamera
+	cost = 3
+
+/datum/gear/utility/boombox
+	display_name = "boombox"
+	path = /obj/item/device/boombox
+	cost = 3
+
 /****************
 Pouches and kits
 ****************/
