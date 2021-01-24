@@ -268,20 +268,20 @@
 	icon = 'manaos/icons/obj/chemical.dmi'
 	icon_state = "bottle15"
 
-attack(mob/living/carbon/slime/M as mob, mob/user as mob)
-	if(!isslime(M))
-		to_chat(user, "<span class='warning'>The stabilizer only works on slimes!</span>")
-		return ..()
-	if(M.stat)
-		to_chat(user, "<span class='warning'>The slime is dead!</span>")
-		return ..()
-	if(M.mutation_chance == 0)
-		to_chat(user, "<span class='warning'>The slime already has no chance of mutating!</span>")
-		return ..()
+	attack(mob/living/carbon/slime/M as mob, mob/user as mob)
+		if(!isslime(M))
+			to_chat(user, "<span class='warning'>The stabilizer only works on slimes!</span>")
+			return ..()
+		if(M.stat)
+			to_chat(user, "<span class='warning'>The slime is dead!</span>")
+			return ..()
+		if(M.mutation_chance == 0)
+			to_chat(user, "<span class='warning'>The slime already has no chance of mutating!</span>")
+			return ..()
 
-	to_chat(user, "<span class='notice'>You feed the slime the stabilizer. It is now less likely to mutate.</span>")
-	M.mutation_chance = clamp(M.mutation_chance-15,0,100)
-	qdel(src)
+		to_chat(user, "<span class='notice'>You feed the slime the stabilizer. It is now less likely to mutate.</span>")
+		M.mutation_chance = clamp(M.mutation_chance-15,0,100)
+		qdel(src)
 
 /obj/effect/golemrune
 	anchored = 1
