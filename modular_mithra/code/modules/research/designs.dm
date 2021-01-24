@@ -1,10 +1,3 @@
-/datum/design/circuit/clonecontrol
-	name = "cloning control console"
-	id = "clonecontrol"
-	req_tech = list(TECH_DATA = 3, TECH_BIO = 3)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/cloning
-	sort_string = "FAGAC"
-
 /datum/design/circuit/clonepod
 	name = "clone pod"
 	id = "clonepod"
