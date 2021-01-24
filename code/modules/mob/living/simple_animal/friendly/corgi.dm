@@ -21,6 +21,7 @@
 	holder_type = /obj/item/weapon/holder/corgi
 	pass_flags = PASS_FLAG_TABLE
 	density = 0
+	gold_core_spawnable = FRIENDLY_SPAWN
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/corgi
 	meat_amount = 3

@@ -23,6 +23,7 @@
 		melee = ARMOR_MELEE_KNIVES
 	)
 	density = 0
+	gold_core_spawnable = FRIENDLY_SPAWN
 
 	meat_amount =   3
 	skin_material = MATERIAL_SKIN_CHITIN

@@ -837,6 +837,13 @@
 	build_path = /obj/item/weapon/stock_parts/circuitboard/cooker
 	sort_string = "WAAAV"
 
+/datum/design/circuit/gibber
+	name = "kitchen appliance (meat gibber)"
+	id = "gibber"
+	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 2)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/gibber
+	sort_string = "WAAAU"
+
 /datum/design/circuit/microwave
 	name = "kitchen appliance (microwave)"
 	id = "microwave"
@@ -844,12 +851,12 @@
 	build_path = /obj/item/weapon/stock_parts/circuitboard/microwave
 	sort_string = "WAAAX"
 
-/datum/design/circuit/gibber
-	name = "kitchen appliance (meat gibber)"
-	id = "gibber"
-	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 2)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/gibber
-	sort_string = "WAAAU"
+/datum/design/circuit/monkey_recycler
+	name = "mining console board"
+	id = "monkeyrecycler"
+	req_tech = list(TECH_POWER = 2,TECH_ENGINEERING = 2)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/machinery/monkey_recycler
+	sort_string = "WAAAY"
 
 /datum/design/circuit/arcademachine
 	name = "battle arcade machine"

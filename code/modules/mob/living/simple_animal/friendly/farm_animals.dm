@@ -109,6 +109,7 @@
 	response_harm   = "kicks"
 	attacktext = "kicked"
 	health = 50
+	gold_core_spawnable = FRIENDLY_SPAWN
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/beef
 	meat_amount = 6
@@ -224,6 +225,7 @@ var/global/chicken_count = 0
 	pass_flags = PASS_FLAG_TABLE
 	mob_size = MOB_SMALL
 	density = 0
+	gold_core_spawnable = FRIENDLY_SPAWN
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/chicken
 	meat_amount = 2
@@ -314,6 +316,7 @@ var/global/chicken_count = 0
 	health = 40
 	melee_damage_lower = 1
 	melee_damage_upper = 5
+	gold_core_spawnable = FRIENDLY_SPAWN
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat/kanguro
 	meat_amount = 4
