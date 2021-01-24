@@ -807,19 +807,19 @@
 	build_path = /obj/item/weapon/stock_parts/circuitboard/pointdefense_control
 	sort_string = "VAAAD"
 
-datum/design/circuit/reagentgrinder
-	name = "reagent grinder appliance (grinder)"
+/datum/design/circuit/reagentgrinder
+	name = "reagent grinder"
 	id = "reagent_grinder"
-	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 2)
+	req_tech = list(TECH_BIO = 2, TECH_MATERIAL = 2, TECH_ENGINEERING = 2)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/reagentgrinder
-	sort_string = "WAAAV"
+	sort_string = "WAABB"
 
-/datum/design/circuit/oven
-	name = "kitchen appliance (oven)"
-	id = "oven"
-	req_tech = list(TECH_BIO = 2, TECH_ENGINEERING = 2)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/oven
-	sort_string = "WAAAW"
+/datum/design/circuit/juicer
+	name = "blender"
+	id = "blender"
+	req_tech = list(TECH_BIO = 1, TECH_MATERIAL = 2, TECH_ENGINEERING = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/juicer
+	sort_string = "WAABC"
 
 /datum/design/circuit/microwave
 	name = "kitchen appliance (microwave)"
