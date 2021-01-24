@@ -316,27 +316,34 @@
 	id = "pacman"
 	req_tech = list(TECH_DATA = 3, TECH_PHORON = 3, TECH_POWER = 3, TECH_ENGINEERING = 3)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/pacman
-	sort_string = "IAAAW"
+	sort_string = "IAAAV"
 
 /datum/design/circuit/superpacman
 	name = "SUPERPACMAN-type generator"
 	id = "superpacman"
 	req_tech = list(TECH_DATA = 3, TECH_POWER = 4, TECH_ENGINEERING = 4)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/pacman/super
-	sort_string = "IAAAX"
+	sort_string = "IAAAW"
 
 /datum/design/circuit/mrspacman
 	name = "MRSPACMAN-type generator"
 	id = "mrspacman"
 	req_tech = list(TECH_DATA = 3, TECH_POWER = 5, TECH_ENGINEERING = 5)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/pacman/mrs
-	sort_string = "IAAAY"
+	sort_string = "IAAAX"
 
 /datum/design/circuit/pacmanpotato
 	name = "PTTO-3 nuclear generator"
 	id = "pacmanpotato"
 	req_tech = list(TECH_DATA = 3, TECH_POWER = 5, TECH_ENGINEERING = 4, TECH_ESOTERIC = 4)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/pacman/super/potato
+	sort_string = "IAAAY"
+
+/datum/design/circuit/pacmanreactor
+	name = "ICRER-2 nuclear generator"
+	id = "pacmanreactor"
+	req_tech = list(TECH_DATA = 4, TECH_POWER = 5, TECH_ENGINEERING = 5)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/pacman/super/potato/reactor
 	sort_string = "IAAAZ"
 
 /datum/design/circuit/batteryrack
@@ -670,6 +677,7 @@
 	req_tech = list(TECH_ENGINEERING = 2, TECH_COMBAT = 2, TECH_BLUESPACE = 2)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/dispersermiddle
 	sort_string = "KCAAH"
+	design_class = "Obstruction Field Machinery"
 
 /datum/design/circuit/disperserback
 	name = "obstruction field disperser material deconstructor"
@@ -705,7 +713,6 @@
 	id = "tcom-server"
 	build_path = /obj/item/weapon/stock_parts/circuitboard/telecomms/server
 	sort_string = "PAAAD"
-	design_class = "Telecomms Machinery"
 
 /datum/design/circuit/tcom/processor
 	name = "processor unit"
@@ -752,6 +759,7 @@
 	req_tech = list(TECH_DATA = 3)
 	build_path = /obj/item/weapon/stock_parts/circuitboard/comm_monitor
 	sort_string = "PAAAL"
+	design_class = "Telecomms Machinery"
 
 /datum/design/circuit/comm_server
 	name = "telecommunications server monitoring console"

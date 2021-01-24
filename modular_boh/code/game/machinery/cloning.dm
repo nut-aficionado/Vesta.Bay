@@ -21,7 +21,7 @@
 	active_power_usage = 600
 	uncreated_component_parts = null
 	var/mob/living/occupant = null
-	var/heal_level = 20			// The clone is released once its health reaches this level.
+	var/heal_level = 30			// The clone is released once its health reaches this level.
 	var/heal_rate = 1
 	var/locked = 0
 	var/obj/machinery/computer/cloning/connected = null //So we remember the connected clone machine.
@@ -30,11 +30,23 @@
 	var/eject_wait = 0				// Don't eject them as soon as they are created fuckkk
 	var/biomass
 	var/maximum_biomass = 160 //2 clones
+	var/mutation_prob = 100
 
 /obj/machinery/clonepod/New()
 	..()
 
 	update_icon()
+
+/obj/machinery/clonepod/RefreshParts()
+	var/S = 0
+	var/M = 0
+
+	S = Clamp(total_component_rating_of_type(/obj/item/weapon/stock_parts/scanning_module), 0, 6)
+	mutation_prob = 100 - 10 * S
+
+	M = Clamp(total_component_rating_of_type(/obj/item/weapon/stock_parts/manipulator), 0, 6)
+	heal_level = 15 * M
+	heal_rate = M / 2
 
 /obj/machinery/clonepod/Destroy()
 	if (occupant)
@@ -93,11 +105,12 @@
 		H.dna = R.dna
 	H.UpdateAppearance()
 	H.sync_organ_dna()
-	var/mut_level = rand(1,3)
-	for(var/i = 1 to mut_level)
-		randmutb(H) //Sometimes the clones come out wrong.
-		H.dna.UpdateSE()
-		H.dna.UpdateUI()
+	if(prob(mutation_prob))
+		var/mut_level = rand(1,3)
+		for(var/i = 1 to mut_level)
+			randmutb(H) //Sometimes the clones come out wrong.
+			H.dna.UpdateSE()
+			H.dna.UpdateUI()
 
 	H.set_cloned_appearance()
 	update_icon()
@@ -107,7 +120,6 @@
 	H.flavor_texts = R.flavor.Copy()
 	//H.suiciding = 0
 	attempting = 0
-	heal_level = rand(10, 45)
 	return 1
 
 //Grow clones to maturity then kick them out.  FREELOADERS
