@@ -36,6 +36,7 @@
 	break_stuff_probability = 25
 	pry_time = 8 SECONDS
 	pry_desc = "clawing"
+	gold_core_spawnable = HOSTILE_SPAWN
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/spider
 	meat_amount = 3

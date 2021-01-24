@@ -17,6 +17,7 @@
 	attacktext = "mauled"
 	pass_flags = PASS_FLAG_TABLE
 	density = 0
+	gold_core_spawnable = FRIENDLY_SPAWN
 
 	meat_type = /obj/item/weapon/reagent_containers/food/snacks/tomatomeat
 	bone_material = null

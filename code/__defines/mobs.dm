@@ -264,6 +264,11 @@
 #define TASTE_DULL 0.5 //anything below 30%
 #define TASTE_NUMB 0.1 //anything below 150%
 
+//gold slime core spawning
+#define NO_SPAWN 0
+#define HOSTILE_SPAWN 1
+#define FRIENDLY_SPAWN 2
+
 //Used by show_message() and emotes
 #define VISIBLE_MESSAGE 1
 #define AUDIBLE_MESSAGE 2

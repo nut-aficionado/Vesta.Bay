@@ -24,6 +24,7 @@
 	melee_damage_flags = DAM_SHARP
 	can_escape = TRUE
 	faction = "russian"
+	gold_core_spawnable = HOSTILE_SPAWN
 
 	//Space bears aren't affected by atmos.
 	min_gas = null

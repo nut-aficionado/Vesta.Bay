@@ -15,6 +15,7 @@
 	faction = "creature"
 	speed = 4
 	supernatural = 1
+	gold_core_spawnable = HOSTILE_SPAWN
 
 /mob/living/simple_animal/hostile/creature/cult
 	faction = "cult"

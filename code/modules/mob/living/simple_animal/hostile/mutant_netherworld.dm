@@ -13,6 +13,7 @@
 	speed = 1
 	maxHealth = 35
 	health = 35
+	gold_core_spawnable = HOSTILE_SPAWN
 
 	harm_intent_damage = 6
 	melee_damage_lower = 5

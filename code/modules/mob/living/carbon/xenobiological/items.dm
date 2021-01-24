@@ -12,6 +12,7 @@
 	var/Uses = 1 // uses before it goes inert
 	var/enhanced = 0 //has it been enhanced before?
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
+	var/mutator_used = FALSE //So you can't shove a dozen mutators into a single slime
 
 	attackby(obj/item/O as obj, mob/user as mob)
 		if(istype(O, /obj/item/weapon/slimesteroid2))
@@ -236,6 +237,52 @@
 		extract.enhanced = 1
 		qdel(src)
 
+/obj/item/weapon/slimemutator
+	name = "slime mutator"
+	desc = "A potent chemical mix that will increase the chance of a slime mutating."
+	icon = 'manaos/icons/obj/chemical.dmi'
+	icon_state = "bottle3"
+
+	attack(mob/living/carbon/slime/M as mob, mob/user as mob)
+		if(!isslime(M))
+			to_chat(user, "<span class='warning'>The mutator only works on slimes!</span>")
+			return ..()
+		if(M.stat)
+			to_chat(user, "<span class='warning'>The slime is dead!</span>")
+			return ..()
+		if(M.mutator_used)
+			to_chat(user, "<span class='warning'>This slime has already consumed a mutator, any more would be far too unstable!</span>")
+			return ..()
+		if(M.mutation_chance == 100)
+			to_chat(user, "<span class='warning'>The slime is already guaranteed to mutate!</span>")
+			return ..()
+
+		to_chat(user, "<span class='notice'>You feed the slime the mutator. It is now more likely to mutate.</span>")
+		M.mutation_chance = Clamp(M.mutation_chance+12,0,100)
+		M.mutator_used = TRUE
+		qdel(src)
+
+/obj/item/slimepotion/slime/stabilizer
+	name = "slime stabilizer"
+	desc = "A potent chemical mix that will reduce the chance of a slime mutating."
+	icon = 'manaos/icons/obj/chemical.dmi'
+	icon_state = "bottle15"
+
+	attack(mob/living/carbon/slime/M as mob, mob/user as mob)
+		if(!isslime(M))
+			to_chat(user, "<span class='warning'>The stabilizer only works on slimes!</span>")
+			return ..()
+		if(M.stat)
+			to_chat(user, "<span class='warning'>The slime is dead!</span>")
+			return ..()
+		if(M.mutation_chance == 0)
+			to_chat(user, "<span class='warning'>The slime already has no chance of mutating!</span>")
+			return ..()
+
+		to_chat(user, "<span class='notice'>You feed the slime the stabilizer. It is now less likely to mutate.</span>")
+		M.mutation_chance = Clamp(M.mutation_chance-15,0,100)
+		qdel(src)
+
 /obj/effect/golemrune
 	anchored = 1
 	desc = "a strange rune used to create golems. It glows when it can be activated."
@@ -298,4 +345,3 @@
 			var/area/A = get_area(src)
 			if(A)
 				to_chat(G, "Golem rune created in [A.name].")
-

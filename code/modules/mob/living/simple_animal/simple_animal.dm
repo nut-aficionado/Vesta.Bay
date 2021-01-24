@@ -33,6 +33,8 @@
 	var/wander = 1	// Does the mob wander around when idle?
 	var/stop_automated_movement_when_pulled = 1 //When set to 1 this stops the animal from moving when someone is pulling it.
 
+	var/gold_core_spawnable = NO_SPAWN //If the mob can be spawned with a gold slime core. HOSTILE_SPAWN are spawned with plasma, FRIENDLY_SPAWN are spawned with blood
+	
 	//Interaction
 	var/response_help   = "tries to help"
 	var/response_disarm = "tries to disarm"
