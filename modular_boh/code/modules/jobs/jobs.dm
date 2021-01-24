@@ -75,14 +75,12 @@ var/const/INF               =(1<<11)
 	selection_color = "#557e38"
 	economic_power = 4
 	minimal_player_age = 8
-	skill_points = 24
+	skill_points = 28
 	outfit_type = /decl/hierarchy/outfit/job/torch/crew/infantry/combat_tech
 	minimum_character_age = list(SPECIES_HUMAN = 20)
-	min_skill = list(	SKILL_CONSTRUCTION = SKILL_ADEPT,
-						SKILL_ELECTRICAL   = SKILL_ADEPT,
-						SKILL_MEDICAL      = SKILL_BASIC,
-						SKILL_COMBAT       = SKILL_ADEPT,
-						SKILL_WEAPONS      = SKILL_ADEPT)
+	min_skill = list(	SKILL_COMBAT       = SKILL_ADEPT,
+						SKILL_WEAPONS      = SKILL_ADEPT,
+						SKILL_EVA          = SKILL_BASIC)
 
 	max_skill = list(	SKILL_COMBAT       = SKILL_EXPERT,
 						SKILL_WEAPONS      = SKILL_PROF,
@@ -100,7 +98,7 @@ var/const/INF               =(1<<11)
 		/datum/mil_rank/marine_corps/e4,
 		/datum/mil_rank/marine_corps/e5
 		)
-	access = list(access_maint_tunnels, access_petrov, access_petrov_security,
+	access = list(access_medical, access_medical_equip, access_engine, access_engine_equip, access_maint_tunnels, access_solgov_crew, access_petrov, access_petrov_security,
 			            access_expedition_shuttle, access_expedition_shuttle_helm, access_guppy, access_hangar, access_guppy_helm, access_infantry,
 			            access_inftech, access_aquila, access_eva)
 
@@ -387,7 +385,7 @@ var/const/INF               =(1<<11)
 	access = list( //Same access as the SolGov Representative + Private access to their equipment locker
 		access_representative, access_representative_guard, access_bridge, access_torch_fax, access_solgov_crew,
 		access_radio_comm,
-		access_sec_doors, access_medical, access_research, access_cargo, access_engine, access_hangar, access_infantry
+		access_sec_doors, access_security, access_medical, access_research, access_cargo, access_engine, access_hangar, access_infantry
 	)
 
 	defer_roundstart_spawn = TRUE
@@ -415,22 +413,22 @@ var/const/INF               =(1<<11)
 		access_liaison, access_bridge, access_torch_fax, access_solgov_crew, access_keycard_auth, access_sec_guard,
 		access_nanotrasen, access_commissary,
 		access_radio_comm, access_radio_serv,
-		access_sec_doors, access_medical, access_research, access_cargo, access_engine, access_hangar
+		access_sec_doors, access_security, access_medical, access_research, access_cargo, access_engine, access_hangar
 	)
 
 /datum/job/bodyguard
 	access = list(
-		access_liaison, access_bridge, access_torch_fax, access_solgov_crew,
+		access_liaison, access_bridge, access_torch_fax, access_solgov_crew, access_sec_guard,
 		access_nanotrasen, access_commissary,
 		access_radio_comm, access_radio_serv,
-		access_sec_doors, access_medical, access_research, access_cargo, access_engine, access_hangar
+		access_sec_doors, access_security, access_medical, access_research, access_cargo, access_engine, access_hangar
 	)
 
 /datum/job/representative
 	access = list(
 		access_representative, access_bridge, access_torch_fax, access_solgov_crew,
 		access_radio_comm,
-		access_sec_doors, access_medical, access_research, access_cargo, access_engine, access_hangar, access_infantry
+		access_sec_doors, access_security, access_medical, access_research, access_cargo, access_engine, access_hangar, access_infantry
 	)
 
 datum/job/sea
