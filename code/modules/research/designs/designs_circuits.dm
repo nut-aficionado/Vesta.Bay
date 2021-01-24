@@ -851,13 +851,6 @@
 	build_path = /obj/item/weapon/stock_parts/circuitboard/microwave
 	sort_string = "WAAAX"
 
-/datum/design/circuit/monkey_recycler
-	name = "mining console board"
-	id = "monkeyrecycler"
-	req_tech = list(TECH_POWER = 2,TECH_ENGINEERING = 2)
-	build_path = /obj/item/weapon/stock_parts/circuitboard/machinery/monkey_recycler
-	sort_string = "WAAAY"
-
 /datum/design/circuit/arcademachine
 	name = "battle arcade machine"
 	id = "arcademachine"
