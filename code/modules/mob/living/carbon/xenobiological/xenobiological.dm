@@ -31,7 +31,7 @@
 	var/number = 0 // Used to understand when someone is talking to it
 	var/cores = 1 // the number of /obj/item/slime_extract's the slime has left inside
 	var/mutation_chance = 30 // Chance of mutating, should be between 25 and 35
-
+	var/mutator_used = FALSE //So you can't shove a dozen mutators into a single slime
 	var/powerlevel = 0 // 0-10 controls how much electricity they are generating
 	var/amount_grown = 0 // controls how long the slime has been overfed, if 10, grows or reproduces
 

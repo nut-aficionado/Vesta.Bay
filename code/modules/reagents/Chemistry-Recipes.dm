@@ -13,6 +13,27 @@
 	var/reaction_sound = 'sound/effects/bubbles.ogg'
 	var/log_is_important = 0 // If this reaction should be considered important for logging. Important recipes message admins when mixed, non-important ones just log to file.
 
+/datum/chemical_reaction/proc/chemical_mob_spawn(datum/reagents/holder, amount_to_spawn, mob_class = HOSTILE_SPAWN, faction = "chemicalsummon", random = TRUE)
+	if(holder && holder.my_atom)
+		var/atom/A = holder.my_atom
+		var/turf/T = get_turf(A)
+
+		playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
+
+		for(var/mob/living/carbon/C in viewers(get_turf(holder.my_atom), null))
+			C.flash_eyes()
+
+		for(var/i in 1 to amount_to_spawn)
+			var/mob/living/simple_animal/S
+			if(random)
+				S = create_random_mob(get_turf(holder.my_atom), mob_class)
+			else
+				S = new mob_class(get_turf(holder.my_atom))//Spawn our specific mob_class
+			S.faction = faction
+			if(prob(50))
+				for(var/j = 1, j <= rand(1, 3), j++)
+					step(S, pick(NORTH,SOUTH,EAST,WEST))
+
 /datum/chemical_reaction/proc/can_happen(var/datum/reagents/holder)
 	//check that all the required reagents are present
 	if(!holder.has_all_reagents(required_reagents))
@@ -1012,20 +1033,30 @@
 	required_reagents = list(/datum/reagent/toxin/phoron = 1)
 	result_amount = 1
 	required = /obj/item/slime_extract/gold
-	var/list/possible_mobs = list(
-							/mob/living/simple_animal/cat,
-							/mob/living/simple_animal/cat/kitten,
-							/mob/living/simple_animal/corgi,
-							/mob/living/simple_animal/corgi/puppy,
-							/mob/living/simple_animal/cow,
-							/mob/living/simple_animal/chick,
-							/mob/living/simple_animal/chicken
-							)
 
 /datum/chemical_reaction/slime/crit/on_reaction(var/datum/reagents/holder)
-	..()
-	var/type = pick(possible_mobs)
-	new type(get_turf(holder.my_atom))
+	var/turf/T = get_turf(holder.my_atom)
+	summon_mobs(holder, T)
+
+/datum/chemical_reaction/slime/proc/summon_mobs(datum/reagents/holder, turf/T)
+	T.visible_message("<span class='danger'>The slime extract begins to vibrate violently!</span>")
+	addtimer(CALLBACK(src, .proc/chemical_mob_spawn, holder, 5, HOSTILE_SPAWN), 50)
+
+/datum/chemical_reaction/slime/crit/lesser
+	name = "Slime Crit Lesser"
+	required_reagents = list(/datum/reagent/blood = 1)
+
+/datum/chemical_reaction/slime/crit/lesser/summon_mobs(datum/reagents/holder, turf/T)
+	T.visible_message("<span class='danger'>The slime extract begins to vibrate violently!</span>")
+	addtimer(CALLBACK(src, .proc/chemical_mob_spawn, holder, 3, HOSTILE_SPAWN, "neutral"), 50)
+
+/datum/chemical_reaction/slime/crit/friendly
+	name = "Slime Crit Friendly"
+	required_reagents = list(/datum/reagent/water = 1)
+
+/datum/chemical_reaction/slime/crit/friendly/summon_mobs(datum/reagents/holder, turf/T)
+	T.visible_message("<span class='danger'>The slime extract begins to vibrate adorably!</span>")
+	addtimer(CALLBACK(src, .proc/chemical_mob_spawn, holder, 1, FRIENDLY_SPAWN, "neutral"), 50)
 
 //Silver
 /datum/chemical_reaction/slime/bork
@@ -1125,7 +1156,7 @@
 
 /datum/chemical_reaction/slime/cell/on_reaction(var/datum/reagents/holder, var/created_volume, var/reaction_flags)
 	..()
-	new /obj/item/weapon/cell/slime(get_turf(holder.my_atom))
+	new /obj/item/weapon/cell/mantid(get_turf(holder.my_atom))
 
 /datum/chemical_reaction/slime/glow
 	name = "Slime Glow"

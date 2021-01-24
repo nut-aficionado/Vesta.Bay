@@ -15,6 +15,7 @@
 	materials = list(MATERIAL_STEEL = 50, MATERIAL_GLASS = 50)
 	build_path = /obj/item/weapon/stock_parts/capacitor
 	sort_string = "CAAAA"
+	design_class = "Machine Components"
 
 /datum/design/item/stock_part/adv_capacitor
 	id = "adv_capacitor"
@@ -136,6 +137,7 @@
 	materials = list(MATERIAL_STEEL = 40, MATERIAL_SILVER = 10)
 	build_path = /obj/item/weapon/stock_parts/subspace/filter
 	sort_string = "UAAAB"
+	design_class = "Telecomms Components"
 
 /datum/design/item/stock_part/subspace_amplifier
 	id = "s-amplifier"

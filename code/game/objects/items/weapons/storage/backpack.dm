@@ -47,8 +47,8 @@
 	desc = "A backpack that opens into a localized pocket of Blue Space."
 	origin_tech = list(TECH_BLUESPACE = 4)
 	icon_state = "holdingpack"
-	max_w_class = ITEM_SIZE_NORMAL
-	max_storage_space = 56
+	max_w_class = ITEM_SIZE_LARGE
+	max_storage_space = 100
 
 /obj/item/weapon/storage/backpack/holding/New()
 	..()
