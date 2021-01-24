@@ -15,7 +15,6 @@
 
 /datum/chemical_reaction/proc/chemical_mob_spawn(datum/reagents/holder, amount_to_spawn, mob_class = HOSTILE_SPAWN, faction = "chemicalsummon", random = TRUE)
 	if(holder && holder.my_atom)
-		var/atom/A = holder.my_atom
 		playsound(get_turf(holder.my_atom), 'sound/effects/phasein.ogg', 100, 1)
 
 		for(var/mob/living/carbon/C in viewers(get_turf(holder.my_atom), null))
