@@ -155,7 +155,7 @@
 	minimum_temperature = 50 CELSIUS
 	maximum_temperature = (50 CELSIUS) + 100
 
-// We did not remove Space Lube 
+// We did not remove Space Lube
 /datum/chemical_reaction/lube
 	name = "Space Lube"
 	result = /datum/reagent/lube
@@ -503,6 +503,24 @@
 	result = /datum/reagent/adrenaline
 	required_reagents = list(/datum/reagent/inaprovaline = 1, /datum/reagent/hyperzine = 1, /datum/reagent/dexalinp = 1)
 	result_amount = 3
+
+/datum/chemical_reaction/kompoton
+	name = "Kompoton"
+	result = /datum/reagent/kompoton
+	required_reagents = list(/datum/reagent/bicaridine = 5, /datum/reagent/iron = 5, /datum/reagent/peridaxon = 5)
+	catalysts = list(/datum/reagent/toxin/phoron = 5)
+	result_amount = 2
+	minimum_temperature = -100 CELSIUS
+	maximum_temperature = -75 CELSIUS
+
+/datum/chemical_reaction/hypeross
+	name = "Hypeross-7"
+	result = /datum/reagent/hypeross
+	required_reagents = list(/datum/reagent/sugar = 5, /datum/reagent/carbon = 5, /datum/reagent/peridaxon = 5)
+	catalysts = list(/datum/reagent/toxin/phoron = 5)
+	result_amount = 2
+	minimum_temperature = -100 CELSIUS
+	maximum_temperature = -75 CELSIUS
 
 /* Solidification */
 /datum/chemical_reaction/phoronsolidification
