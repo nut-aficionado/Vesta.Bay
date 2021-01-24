@@ -821,6 +821,14 @@
 	build_path = /obj/item/weapon/stock_parts/circuitboard/juicer
 	sort_string = "WAABC"
 
+/datum/design/circuit/cooker
+	name = "kitchen appliance (assorted)"
+	desc = "Allows for the construction of an interchangable cooking appliance circuit board. Use a multitool to select appliance."
+	id = "cooker"
+	req_tech = list(TECH_BIO = 1, TECH_MATERIAL = 1)
+	build_path = /obj/item/weapon/stock_parts/circuitboard/cooker
+	sort_string = "WAAAV"
+
 /datum/design/circuit/microwave
 	name = "kitchen appliance (microwave)"
 	id = "microwave"
