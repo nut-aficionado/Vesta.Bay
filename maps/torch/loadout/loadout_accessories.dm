@@ -3,7 +3,6 @@
 	description = "A medal or ribbon awarded to SolGov personnel for significant accomplishments."
 	path = /obj/item/clothing/accessory
 	cost = 8
-	allowed_branches = SOLGOV_BRANCHES
 
 /datum/gear/accessory/solawardmajor/New()
 	..()
@@ -23,7 +22,6 @@
 	description = "A medal or ribbon awarded to SolGov personnel for minor accomplishments."
 	path = /obj/item/clothing/accessory
 	cost = 5
-	allowed_branches = SOLGOV_BRANCHES
 
 /datum/gear/accessory/solawardminor/New()
 	..()
@@ -44,14 +42,12 @@
 	path = /obj/item/clothing/accessory/solgov/ec_scarf
 	description = "A section-specific scarf for Surveyor Corps uniforms."
 	flags = GEAR_HAS_TYPE_SELECTION
-	allowed_branches = list(/datum/mil_branch/fleet)
 
 /datum/gear/accessory/ec_patch
 	display_name = "Surveyor Corps patch"
 	path = /obj/item/clothing/accessory/solgov/ec_patch
 	description = "A shoulder patch representing the Surveyor Corps."
 	flags = GEAR_HAS_TYPE_SELECTION
-	allowed_branches = list(/datum/mil_branch/fleet)
 
 /datum/gear/accessory/torch_patch
 	display_name = "Dagon mission patch"
@@ -62,16 +58,11 @@
 	display_name = "pilot's qualification pin"
 	path = /obj/item/clothing/accessory/solgov/specialty/pilot
 	allowed_skills = list(SKILL_PILOT = SKILL_ADEPT)
-	allowed_branches = list(
-		/datum/mil_branch/fleet,
-		/datum/mil_branch/expeditionary_corps
-	)
 
 /datum/gear/accessory/fleetpatch
 	display_name = "fleet patch"
 	path = /obj/item/clothing/accessory/solgov/fleet_patch
 	flags = GEAR_HAS_TYPE_SELECTION
-	allowed_branches = list(/datum/mil_branch/fleet)
 
 /datum/gear/accessory/armband_ma
 	display_name = "master at arms brassard"
@@ -102,19 +93,14 @@
 	allowed_roles = list(/datum/job/rd, /datum/job/scientist, /datum/job/scientist_assistant, /datum/job/assistant)
 
 /datum/gear/accessory/armband_nt
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/accessory/ntaward
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/accessory/tie
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/accessory/tie_color
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/accessory/stethoscope
-	allowed_roles = STERILE_ROLES
 
 /datum/gear/storage/brown_vest
 	allowed_roles = list(/datum/job/chief_engineer, /datum/job/senior_engineer, /datum/job/engineer, /datum/job/roboticist, /datum/job/qm, /datum/job/cargo_tech,
@@ -164,59 +150,36 @@
 	allowed_roles = ARMORED_ROLES
 
 /datum/gear/clothing/hawaii
-	allowed_roles = SEMIFORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/scarf
-	allowed_roles = SEMIANDFORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/flannel
-	allowed_roles = SEMIFORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/vest
-	allowed_roles = FORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/suspenders
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/suspenders/colorable
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/wcoat
-	allowed_roles = FORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/zhongshan
-	allowed_roles = FORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/dashiki
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/thawb
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/sherwani
-	allowed_roles = FORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/qipao
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/sweater
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/clothing/tangzhuang
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/accessory/bowtie
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/accessory/ftupin
-	allowed_branches = CIVILIAN_BRANCHES
 
 /*********************
  tactical accessories
@@ -246,7 +209,6 @@
 /datum/gear/tactical/armor_pouches/misc
 	display_name = "miscellaneous armor pouches selection"
 	path = /obj/item/clothing/accessory/storage/pouches
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/tactical/armor_pouches/misc/New()
 	..()
@@ -269,7 +231,6 @@
 /datum/gear/tactical/large_pouches/misc
 	display_name = "miscellaneous large armor pouches selection"
 	path = /obj/item/clothing/accessory/storage/pouches/large
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/tactical/large_pouches/misc/New()
 	..()
