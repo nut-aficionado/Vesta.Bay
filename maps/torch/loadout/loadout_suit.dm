@@ -72,4 +72,15 @@
 /datum/gear/suit/sfp
 	display_name = "Agent's jacket"
 	path = /obj/item/clothing/suit/storage/toggle/agent_jacket
+<<<<<<< Updated upstream
 	allowed_roles = list(/datum/job/detective,/datum/job/sfpagent)
+=======
+	allowed_roles = list(/datum/job/detective)
+	allowed_branches = list(/datum/mil_branch/solgov)
+
+/datum/gear/suit/robo_labcoat
+	display_name = "Fortschritt Systems labcoat"
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/manaos/roboticist
+	allowed_roles = CASUAL_ROLES
+	allowed_branches = CIVILIAN_BRANCHES
+>>>>>>> Stashed changes
