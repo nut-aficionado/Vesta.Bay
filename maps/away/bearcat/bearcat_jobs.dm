@@ -6,6 +6,7 @@
 	info = "Your ship has suffered a catastrophic amount of damage, leaving it dark and crippled in the depths of \
 	unexplored space. The Captain is dead, leaving you, previously the First Mate in charge. Organize what's left of \
 	your crew, and maybe you'll be able to survive long enough to be rescued."
+	whitelisted_species = list(SPECIES_HUMAN,SPECIES_GRAVWORLDER,SPECIES_SPACER,SPECIES_VATGROWN,SPECIES_TRITONIAN,SPECIES_BOOSTER,SPECIES_MULE,SPECIES_YEOSA,SPECIES_UNATHI,SPECIES_NABBER,SPECIES_ADHERENT,SPECIES_DIONA,SPECIES_PROMETHEAN,SPECIES_IPC,SPECIES_AKULA,SPECIES_PLASMASANS,SPECIES_SHELL,SPECIES_SKRELL,SPECIES_CUSTOM,SPECIES_OLDUNATHI,SPECIES_TAJ,SPECIES_SERGAL,SPECIES_VASS,SPECIES_VULP)
 	min_skill = list(	SKILL_ANATOMY = SKILL_BASIC,
 						SKILL_MEDICAL = SKILL_BASIC,
 						SKILL_EVA = SKILL_ADEPT,
@@ -28,6 +29,7 @@
 	info = "Your ship has suffered a catastrophic amount of damage, leaving it dark and crippled in the depths of \
 	unexplored space. Work together with the Acting Captain and what's left of the crew, and maybe you'll be able \
 	to survive long enough to be rescued."
+	whitelisted_species = list(SPECIES_HUMAN,SPECIES_GRAVWORLDER,SPECIES_SPACER,SPECIES_VATGROWN,SPECIES_TRITONIAN,SPECIES_BOOSTER,SPECIES_MULE,SPECIES_YEOSA,SPECIES_UNATHI,SPECIES_NABBER,SPECIES_ADHERENT,SPECIES_DIONA,SPECIES_PROMETHEAN,SPECIES_IPC,SPECIES_AKULA,SPECIES_PLASMASANS,SPECIES_SHELL,SPECIES_SKRELL,SPECIES_CUSTOM,SPECIES_OLDUNATHI,SPECIES_TAJ,SPECIES_SERGAL,SPECIES_VASS,SPECIES_VULP)
 	min_skill = list(	SKILL_ANATOMY = SKILL_BASIC,
 						SKILL_MEDICAL = SKILL_BASIC,
 						SKILL_EVA = SKILL_ADEPT,
