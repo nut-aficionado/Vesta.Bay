@@ -154,3 +154,7 @@
 	trenchcoats += /obj/item/clothing/suit/storage/det_trench/grey
 	trenchcoats += /obj/item/clothing/suit/leathercoat
 	gear_tweaks += new/datum/gear_tweak/path/specified_types_list(trenchcoats)
+
+/datum/gear/suit/robo_labcoat
+	display_name = "Fortschritt Systems labcoat"
+	path = /obj/item/clothing/suit/storage/toggle/labcoat/manaos/roboticist
