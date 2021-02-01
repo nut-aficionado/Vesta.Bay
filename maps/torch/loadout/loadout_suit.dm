@@ -73,8 +73,6 @@
 	display_name = "Agent's jacket"
 	path = /obj/item/clothing/suit/storage/toggle/agent_jacket
 	allowed_roles = list(/datum/job/detective,/datum/job/sfpagent)
-	allowed_roles = list(/datum/job/detective)
-	allowed_branches = list(/datum/mil_branch/solgov)
 
 /datum/gear/suit/robo_labcoat
 	display_name = "Fortschritt Systems labcoat"
