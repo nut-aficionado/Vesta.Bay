@@ -2,7 +2,6 @@
 	display_name = "SolGov beret selection"
 	description = "A beret denoting service in an organization within SolGov."
 	path = /obj/item/clothing/head/beret/solgov
-	allowed_branches = SOLGOV_BRANCHES
 
 /datum/gear/head/solberet/New()
 	..()
@@ -20,24 +19,20 @@
 /datum/gear/head/veteranhat
 	display_name = "veteran hat"
 	path = /obj/item/clothing/head/soft/solgov/veteranhat
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/head/solhat
 	display_name = "sol central government hat"
 	path = /obj/item/clothing/head/soft/solgov
-	allowed_branches = SOLGOV_BRANCHES
 
 /datum/gear/head/fleetcover
 	display_name = "fleet utilty cover"
 	path = /obj/item/clothing/head/solgov/utility/fleet
 	cost = 0
-	allowed_branches = list(/datum/mil_branch/fleet)
 
 /datum/gear/head/fleetcap
 	display_name = "fleet cap"
 	path = /obj/item/clothing/head/soft/solgov/fleet
 	cost = 0
-	allowed_branches = list(/datum/mil_branch/fleet)
 
 /datum/gear/head/echat
 	display_name = "EC cap"
@@ -49,47 +44,34 @@
 	allowed_roles = STERILE_ROLES
 
 /datum/gear/head/beret
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/mask/bandana
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/head/bandana
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/head/beanie
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/head/bow
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/head/cap
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/head/hairflower
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/head/hardhat
 	allowed_roles = TECHNICAL_ROLES
 
 /datum/gear/head/formalhat
-	allowed_roles = FORMAL_ROLES
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/head/informalhat
-	allowed_branches = CIVILIAN_BRANCHES
 
 /datum/gear/head/welding
-	allowed_roles = TECHNICAL_ROLES
 
 /datum/gear/tactical/balaclava
-	allowed_roles = ARMORED_ROLES
 
 /datum/gear/head/fleetberet
 	display_name = "Fleet branch beret selection"
 	description = "A beret denoting service in one of the fleets within the SCG Fleet."
 	path = /obj/item/clothing/head/beret/solgov/fleet/branch
-	allowed_branches = list(/datum/mil_branch/fleet)
 
 /datum/gear/head/fleetberet/New()
 	..()
@@ -105,7 +87,6 @@
 	display_name = "EC sections beret selection"
 	description = "A beret denoting service in one of the branches within the SCG EC."
 	path = /obj/item/clothing/head/beret/solgov/expedition/branch
-	allowed_branches = list(/datum/mil_branch/expeditionary_corps)
 
 /datum/gear/head/ECberet/New()
 	..()
@@ -115,11 +96,18 @@
 	gear_tweaks += new/datum/gear_tweak/path(berets)
 
 /datum/gear/head/corporateberet
-	allowed_branches = CIVILIAN_BRANCHES
-	
+
 /datum/gear/head/nursehat
 	display_name = "Nurses Hat"
 	description = "A small white hat with a blue medical cross on the front, worn by nursing staff."
 	path = /obj/item/clothing/head/nursehat
 	allowed_roles = MEDICAL_ROLES
-	allowed_branches = list(/datum/mil_branch/fleet,/datum/mil_branch/marine_corps,/datum/mil_branch/civilian)
+
+/datum/gear/head/clown
+	allowed_branches = CIVILIAN_BRANCHES
+
+/datum/gear/head/mime
+	allowed_branches = CIVILIAN_BRANCHES
+
+/datum/gear/head/mimeberet
+	allowed_branches = CIVILIAN_BRANCHES

@@ -12,7 +12,7 @@
 	apc_test_exempt_areas = list(
 		/area/map_template/colony2/external = NO_SCRUBBER|NO_VENT
 	)
-	spawn_weight = 0.4
+	spawn_weight = 0.3
 
 /decl/submap_archetype/playablecolony2
 	descriptor = "landed colony ship"
@@ -22,8 +22,19 @@
 	title = "Ship Colonist"
 	supervisors = "the trust of your fellow Colonists"
 	info = "You are a Colonist, living on the rim of explored, let alone inhabited, space in a recently landed colony ship."
-	total_positions = 3
+	alt_titles = list(
+		"Ship Colony Engineer",
+		"Ship Colony Doctor")
+	total_positions = 4
+	whitelisted_species = list(SPECIES_HUMAN,SPECIES_GRAVWORLDER,SPECIES_SPACER,SPECIES_VATGROWN,SPECIES_TRITONIAN,SPECIES_BOOSTER,SPECIES_MULE,SPECIES_YEOSA,SPECIES_UNATHI,SPECIES_NABBER,SPECIES_ADHERENT,SPECIES_DIONA,SPECIES_PROMETHEAN,SPECIES_IPC,SPECIES_AKULA,SPECIES_PLASMASANS,SPECIES_SHELL,SPECIES_SKRELL,SPECIES_CUSTOM,SPECIES_OLDUNATHI,SPECIES_TAJ,SPECIES_SERGAL,SPECIES_VASS,SPECIES_VULP)
 	outfit_type = /decl/hierarchy/outfit/job/colonist2
+	min_skill = list(	SKILL_CONSTRUCTION = SKILL_BASIC,
+						SKILL_ANATOMY = SKILL_BASIC,
+						SKILL_MEDICAL = SKILL_BASIC,
+						SKILL_BOTANY = SKILL_BASIC,
+						SKILL_EVA = SKILL_BASIC,
+						SKILL_ELECTRICAL = SKILL_BASIC)
+	skill_points = 20
 
 /decl/hierarchy/outfit/job/colonist2
 	name = OUTFIT_JOB_NAME("Colonist2")

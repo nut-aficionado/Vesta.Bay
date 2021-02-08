@@ -25,7 +25,7 @@
 	can_be_placed_into = null
 	item_flags = ITEM_FLAG_NO_BLUDGEON
 	atom_flags = ATOM_FLAG_OPEN_CONTAINER
-	unacidable = 0
+	unacidable = FALSE
 
 	var/on_fire = 0
 	var/burn_time = 20 //if the rag burns for too long it turns to ashes
@@ -111,6 +111,8 @@
 	if(isliving(target))
 		var/mob/living/M = target
 		if(on_fire)
+			if (user.a_intent == I_HELP)
+				return FALSE
 			user.visible_message(
 				SPAN_DANGER("\The [user] hits \the [target] with \the [src]!"),
 				SPAN_DANGER("You hit \the [target] with \the [src]!")
