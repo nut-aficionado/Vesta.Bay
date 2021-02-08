@@ -12,7 +12,7 @@
 	var/burning = null
 	var/hitsound = "swing_hit"
 	var/slot_flags = 0		//This is used to determine on which slots an item can fit.
-	var/no_attack_log = 0			//If it's an item we don't want to log attack_logs with, set this to 1
+	var/no_attack_log = FALSE			//If it's an item we don't want to log attack_logs with, set this to 1
 	pass_flags = PASS_FLAG_TABLE
 //	causeerrorheresoifixthis
 	var/obj/item/master = null
@@ -378,7 +378,7 @@ var/list/global/slot_flags_enumeration = list(
 		if(!H.slot_is_accessible(slot, src, _user))
 			return 0
 
-	
+
 	if (!force && istype(src, /obj/item/clothing))
 		var/obj/item/clothing/SC = src
 		var/bulky = SC.get_bulky_coverage() //disallow bulky things from covering one another
@@ -549,7 +549,9 @@ var/list/global/slot_flags_enumeration = list(
 	return loc
 
 /obj/item/proc/eyestab(mob/living/carbon/M as mob, mob/living/carbon/user as mob)
-
+	if (user.a_intent == I_HELP)
+		return FALSE
+		
 	var/mob/living/carbon/human/H = M
 	if(istype(H))
 		for(var/obj/item/protection in list(H.head, H.wear_mask, H.glasses))

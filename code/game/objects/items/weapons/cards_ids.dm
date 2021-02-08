@@ -116,15 +116,6 @@
 	origin_tech = list(TECH_MAGNET = 2, TECH_ESOTERIC = 2)
 	var/uses = 10
 
-	var/static/list/card_choices = list(
-							/obj/item/weapon/card/emag,
-							/obj/item/weapon/card/union,
-							/obj/item/weapon/card/data,
-							/obj/item/weapon/card/data/full_color,
-							/obj/item/weapon/card/data/disk,
-							/obj/item/weapon/card/id,
-						) //Should be enough of a selection for most purposes
-
 var/const/NO_EMAG_ACT = -50
 
 /obj/item/weapon/card/emag/resolve_attackby(atom/A, mob/user)
@@ -147,19 +138,7 @@ var/const/NO_EMAG_ACT = -50
 
 /obj/item/weapon/card/emag/Initialize()
 	. = ..()
-	if(length(card_choices) && !card_choices[card_choices[1]])
-		card_choices = generate_chameleon_choices(card_choices)
-
-/obj/item/weapon/card/emag/verb/change(picked in card_choices)
-	set name = "Change Cryptographic Sequencer Appearance"
-	set category = "Chameleon Items"
-	set src in usr
-
-	if (!(usr.incapacitated()))
-		if(!ispath(card_choices[picked]))
-			return
-
-		disguise(card_choices[picked], usr)
+	set_extension(src,/datum/extension/chameleon/emag)
 	
 /obj/item/weapon/card/emag/get_antag_info()
 	. = ..()
@@ -343,6 +322,61 @@ var/const/NO_EMAG_ACT = -50
 	to_chat(usr, "The DNA hash on the card is [dna_hash].")
 	to_chat(usr, "The fingerprint hash on the card is [fingerprint_hash].")
 	return
+
+/decl/vv_set_handler/id_card_military_branch
+	handled_type = /obj/item/weapon/card/id
+	handled_vars = list("military_branch")
+
+/decl/vv_set_handler/id_card_military_branch/handle_set_var(var/obj/item/weapon/card/id/id, variable, var_value, client)
+	if(!var_value)
+		id.military_branch = null
+		id.military_rank = null
+		return
+
+	if(istype(var_value, /datum/mil_branch))
+		if(var_value != id.military_branch)
+			id.military_branch = var_value
+			id.military_rank = null
+		return
+
+	if(ispath(var_value, /datum/mil_branch) || istext(var_value))
+		var/datum/mil_branch/new_branch = mil_branches.get_branch(var_value)
+		if(new_branch)
+			if(new_branch != id.military_branch)
+				id.military_branch = new_branch
+				id.military_rank = null
+			return
+
+	to_chat(client, SPAN_WARNING("Input, must be an existing branch - [var_value] is invalid"))
+
+/decl/vv_set_handler/id_card_military_rank
+	handled_type = /obj/item/weapon/card/id
+	handled_vars = list("military_rank")
+
+/decl/vv_set_handler/id_card_military_rank/handle_set_var(var/obj/item/weapon/card/id/id, variable, var_value, client)
+	if(!var_value)
+		id.military_rank = null
+		return
+
+	if(!id.military_branch)
+		to_chat(client, SPAN_WARNING("military_branch not set - No valid ranks available"))
+		return
+
+	if(ispath(var_value, /datum/mil_rank))
+		var/datum/mil_rank/rank = var_value
+		var_value = initial(rank.name)
+
+	if(istype(var_value, /datum/mil_rank))
+		var/datum/mil_rank/rank = var_value
+		var_value = rank.name
+
+	if(istext(var_value))
+		var/new_rank = mil_branches.get_rank(id.military_branch.name, var_value)
+		if(new_rank)
+			id.military_rank = new_rank
+			return
+
+	to_chat(client, SPAN_WARNING("Input must be an existing rank belonging to military_branch - [var_value] is invalid"))
 
 /obj/item/weapon/card/id/silver
 	name = "identification card"

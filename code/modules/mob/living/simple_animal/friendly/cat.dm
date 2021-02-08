@@ -23,6 +23,7 @@
 	possession_candidate = 1
 	pass_flags = PASS_FLAG_TABLE
 	density = 0
+	gold_core_spawnable = FRIENDLY_SPAWN
 
 	skin_material = MATERIAL_SKIN_FUR_ORANGE
 

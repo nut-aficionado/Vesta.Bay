@@ -15,6 +15,7 @@
 	speed = -1
 	maxHealth = 250
 	health = 250
+	gold_core_spawnable = HOSTILE_SPAWN
 
 	pixel_x = -16
 
